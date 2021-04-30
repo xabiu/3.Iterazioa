@@ -1,0 +1,456 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 12:11:30 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 14320@LAPTOP-1MIN6PMA
+
+[2021-04-06 12:11:30 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 12:11:30 #3 type.registry] 
+New type domain.Pronostikoa
+
+[2021-04-06 12:11:30 #4 type.registry] 
+New type java.util.Vector<domain.Pronostikoa>
+
+[2021-04-06 12:11:30 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 12:11:30 #6 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 12:11:30 #7 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 12:11:30 #8 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 12:11:30 #9 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 12:17:12 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' has been recovered (tr. 25-26)
+
+[2021-04-06 12:17:12 #2 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 4792@LAPTOP-1MIN6PMA
+
+[2021-04-06 12:17:12 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 12:17:12 #4 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 12:17:12 #5 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 12:17:12 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 12:17:12 #7 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 12:17:12 #8 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 12:21:25 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 19360@LAPTOP-1MIN6PMA
+
+[2021-04-06 12:21:26 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 12:21:26 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 12:21:26 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 12:21:26 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 12:21:26 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 12:21:26 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:00:30 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 28168@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:00:30 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:00:30 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:00:30 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:00:30 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:00:30 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:00:30 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+[2021-04-06 21:00:30 #8 type.registry] 
+New type domain.Apustua
+
+[2021-04-06 21:00:30 #9 type.registry] 
+New type java.util.Vector<domain.Apustua>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:03:43 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' has been recovered (tr. 28-28)
+
+[2021-04-06 21:03:43 #2 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 25852@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:03:43 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:03:43 #4 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:03:43 #5 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:03:43 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:03:43 #7 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:03:43 #8 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:05:09 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 3024@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:05:09 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:05:09 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:05:09 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:05:09 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:05:09 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:05:09 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:06:08 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 29624@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:06:08 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:06:08 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:06:08 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:06:08 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:06:08 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:06:08 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:06:16 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 2576@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:06:16 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:06:16 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:06:16 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:06:16 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:06:16 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:06:16 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:06:32 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 25172@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:06:32 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:06:32 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:06:32 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:06:32 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:06:32 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:06:32 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:10:23 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 6780@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:10:23 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:10:23 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:10:23 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:10:23 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:10:23 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:10:23 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:11:53 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 27128@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:11:53 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:11:53 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:11:53 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:11:53 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:11:53 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:11:53 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:15:30 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 21732@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:15:30 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:15:30 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:15:30 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:15:30 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:15:30 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:15:30 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:22:46 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 17976@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:22:46 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:22:46 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:22:46 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:22:46 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:22:46 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:22:46 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:35:03 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 9168@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:35:03 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:35:03 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:35:03 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:35:03 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:35:03 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:35:03 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+[2021-04-06 21:35:03 #8 type] 
+Type domain.Apustua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:58:39 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' has been recovered (tr. 29-29)
+
+[2021-04-06 21:58:39 #2 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 11192@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:58:40 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:58:40 #4 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:58:40 #5 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:58:40 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:58:40 #7 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:58:40 #8 type] 
+Type domain.Pronostikoa is not enhanced.
+
+[2021-04-06 21:58:40 #9 type] 
+Type domain.Apustua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 21:59:27 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' has been recovered (tr. 30-31)
+
+[2021-04-06 21:59:27 #2 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 29864@LAPTOP-1MIN6PMA
+
+[2021-04-06 21:59:27 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 21:59:27 #4 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 21:59:27 #5 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 21:59:27 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 21:59:27 #7 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 21:59:27 #8 type] 
+Type domain.Pronostikoa is not enhanced.
+
+[2021-04-06 21:59:27 #9 type] 
+Type domain.Apustua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 22:02:56 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 25752@LAPTOP-1MIN6PMA
+
+[2021-04-06 22:02:57 #2 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 22:02:57 #3 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 22:02:57 #4 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 22:02:57 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 22:02:57 #6 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 22:02:57 #7 type] 
+Type domain.Pronostikoa is not enhanced.
+
+[2021-04-06 22:02:57 #8 type] 
+Type domain.Apustua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-04-06 22:03:48 #1 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' has been recovered (tr. 32-33)
+
+[2021-04-06 22:03:48 #2 store] 
+Database 'C:\Users\xabiu\OneDrive\Ordenagailua\2.Iterazioa\2iterazio\src\main\resources\bets.temp' is opened by 16976@LAPTOP-1MIN6PMA
+
+[2021-04-06 22:03:49 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-04-06 22:03:49 #4 type] 
+Type domain.Event is not enhanced.
+
+[2021-04-06 22:03:49 #5 type] 
+Type domain.Erabiltzailea is not enhanced.
+
+[2021-04-06 22:03:49 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2021-04-06 22:03:49 #7 type] 
+Type domain.Erregistratua is not enhanced.
+
+[2021-04-06 22:03:49 #8 type] 
+Type domain.Pronostikoa is not enhanced.
+
+[2021-04-06 22:03:49 #9 type] 
+Type domain.Apustua is not enhanced.
+
