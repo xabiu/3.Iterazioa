@@ -1,6 +1,7 @@
 package businessLogic;
 
 import java.util.Vector;
+import java.util.ArrayList;
 import java.util.Date;
 
 //import domain.Booking;
@@ -110,7 +111,7 @@ public interface BLFacade {
 	public void gertaeraSortu(String azalpena,Date date,int zenb);
 	
 	@WebMethod
-	public void pronostikoaSortu(double kuota, int pronostikoZb);
+	public void pronostikoaSortu(double kuota, int pronostikoZb, int z2, String emaitza);
 	
 	@WebMethod
 	public void apustuaEgin(Pronostikoa p, String emaitza, double dirua, String erabNAN, int z);
@@ -126,5 +127,16 @@ public interface BLFacade {
 	
 	@WebMethod
 	public void gertaeraKendu(Event e);
-
+	
+	@WebMethod
+	public Question galderaLortu(int i);
+	
+	@WebMethod
+	public int pronostikoHandienaLortu();
+	
+	@WebMethod
+	public int zenbakiAnitzHandienaLortu();
+	
+	@WebMethod
+	public void apustuAnitzaEgin(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l);
 }

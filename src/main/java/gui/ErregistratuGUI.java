@@ -69,7 +69,7 @@ public class ErregistratuGUI extends JFrame {
 		btnNewButton_1.setBounds(12, 89, 408, 43);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e1) {
-				ApustuaEginGUI ap = new ApustuaEginGUI(unekoframe,e);
+				JFrame ap = new ApostuMotaGUI(unekoframe,e);
 				ap.setVisible(true);
 			}
 		});
@@ -79,7 +79,7 @@ public class ErregistratuGUI extends JFrame {
 		btnNewButton_2.setBounds(12, 145, 408, 43);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e1) {
-				DiruaSartuGUI a = new DiruaSartuGUI(e.getDirua(),unekoframe,e.getIz(),e.getPasahitza());
+				DiruaSartuGUI a = new DiruaSartuGUI(e.getDirua(),unekoframe,e.getIz(), e.getPasahitza());
 				a.setVisible(true);
 			}
 		});

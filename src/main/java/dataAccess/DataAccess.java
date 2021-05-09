@@ -1,5 +1,6 @@
 package dataAccess;
 
+import java.util.ArrayList;
 //hello
 import java.util.Calendar;
 import java.util.Date;
@@ -20,6 +21,7 @@ import configuration.ConfigXML;
 import configuration.UtilDate;
 import domain.Question;
 import domain.Admin;
+import domain.ApostuAnitza;
 import domain.Apustua;
 import domain.Erabiltzailea;
 import domain.Erregistratua;
@@ -264,6 +266,14 @@ public class DataAccess {
 		return res;
 	}
 	
+	public List<Pronostikoa> pronostikoHandienaLortu() {
+		db.getTransaction().begin();
+		TypedQuery<Pronostikoa> query = db.createQuery("SELECT p FROM Pronostikoa p ",Pronostikoa.class);
+		List<Pronostikoa> l = query.getResultList();
+		db.getTransaction().commit();
+		return l;
+	}
+	
 	public List<Event> getGertaeraHandiena() {
 		db.getTransaction().begin();
 		TypedQuery<Event> query = db.createQuery("SELECT e FROM Event e ",Event.class);
@@ -297,12 +307,12 @@ public class DataAccess {
 		db.getTransaction().commit();
 	}
 	
-	public void pronostikoaSortu(double kuota, int pronostikoZb) {
+	public void pronostikoaSortu(double kuota, int pronostikoZb, int z2, String e) {
 		db.getTransaction().begin();
-		Pronostikoa p = new Pronostikoa(kuota,pronostikoZb);
-		Question q = db.find(Question.class, pronostikoZb);
-		db.persist(p);
+		Pronostikoa p = new Pronostikoa(kuota,pronostikoZb,e);
+		Question q = db.find(Question.class, z2);
 		q.pronostikoaGehitu(p);
+		db.persist(p);
 		db.getTransaction().commit();
 	}
 	
@@ -371,6 +381,36 @@ public class DataAccess {
 		}
 		return res;
 	}
+	
+	
+	public int zenbakiAnitzHandienaLortu() {
+		db.getTransaction().begin();
+		TypedQuery<ApostuAnitza> query = db.createQuery("SELECT ap FROM ApostuAnitza ap ",ApostuAnitza.class);
+		List<ApostuAnitza> l = query.getResultList();
+		db.getTransaction().commit();
+		if(l == null) {
+			return 0;
+		}else {
+			int handiena = 0;
+			for(ApostuAnitza a:l) {
+				if(a.getZenbakia()>handiena) {
+					handiena = a.getZenbakia();
+				}
+			}
+			return handiena;
+		}
+	}
+	
+	public void apostuAnitzaSortu(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l) {
+		db.getTransaction().begin();
+		ApostuAnitza a = new ApostuAnitza(Zb,dirua,NAN,kuotaM,l);
+		db.persist(a);
+		for(Pronostikoa p: l) {
+			Pronostikoa p1 = db.find(Pronostikoa.class, p.getPronostikoZb());
+			p1.apustuAnitzaGehitu(a);
+		}
+		db.getTransaction().commit();
+	}
 
 	public void open(boolean initializeMode) {
 
@@ -409,6 +449,13 @@ public class DataAccess {
 	public void close() {
 		db.close();
 		System.out.println("DataBase closed");
+	}
+	
+	public Question galderaLortu(int i) {
+		db.getTransaction().begin();
+		Question q = db.find(Question.class, i);
+		db.getTransaction().commit();
+		return q;
 	}
 
 }

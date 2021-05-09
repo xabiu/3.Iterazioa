@@ -55,7 +55,7 @@ public class AdminGUI extends JFrame {
 		btnNewButton.setBounds(12, 13, 408, 35);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JFrame a = new PronostikoaSortuGUI(j);
+				JFrame a = new PronostikoakSortuGUI(j);
 				a.setVisible(true);
 				
 			}
@@ -96,7 +96,7 @@ public class AdminGUI extends JFrame {
 		btnNewButton_4.setBounds(12, 213, 408, 27);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame a = new GertaeraAukeratuGUI(j);
+				JFrame a = new GertaerakAurkeratu(j);
 				a.setVisible(true);
 			}
 		});

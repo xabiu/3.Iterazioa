@@ -26,7 +26,7 @@ public class Question implements Serializable {
 	@XmlIDREF
 	private Event event;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Pronostikoa> pronostikoak=new Vector<Pronostikoa>();
+	private Vector<Pronostikoa> pronostikoak;
 
 	public Question(){
 		super();
@@ -38,13 +38,14 @@ public class Question implements Serializable {
 		this.question = query;
 		this.betMinimum=betMinimum;
 		this.event = event;
+		pronostikoak  = new Vector<Pronostikoa>();
 	}
 	
 	public Question(String query, float betMinimum,  Event event) {
 		super();
 		this.question = query;
 		this.betMinimum=betMinimum;
-
+		pronostikoak  = new Vector<Pronostikoa>();
 		//this.event = event;
 	}
 	

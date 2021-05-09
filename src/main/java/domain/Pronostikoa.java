@@ -18,6 +18,10 @@ public class Pronostikoa {
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 	private Vector<Apustua> apustuak=new Vector<Apustua>();
 	
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	private Vector<ApostuAnitza> apustuAnitzak=new Vector<ApostuAnitza>();
+	private String Emaitza;
+	
 	public Pronostikoa() {
 		super();
 	}
@@ -25,11 +29,28 @@ public class Pronostikoa {
 	public Pronostikoa(double kuota, int pronostikoZb) {
 		this.kuota = kuota;
 		this.pronostikoZb = pronostikoZb;
-		apustuak = null;
+		apustuak = new Vector<Apustua>();
+		apustuAnitzak = new Vector<ApostuAnitza>();
+	}
+	
+	public Pronostikoa(double kuota, int pronostikoZb, String emaitza) {
+		this.kuota = kuota;
+		this.pronostikoZb = pronostikoZb;
+		apustuak = new Vector<Apustua>();
+		this.Emaitza = emaitza;
+		apustuAnitzak = new Vector<ApostuAnitza>();
 	}
 	
 	public void apustuaGehitu(Apustua a) {
 		apustuak.add(a);
+	}
+	
+	public void apustuAnitzaGehitu(ApostuAnitza ap) {
+		apustuAnitzak.add(ap);
+	}
+	
+	public void setEmaitza(String e) {
+		this.Emaitza = e;
 	}
 	
 	public int getPronostikoZb() {
@@ -42,5 +63,14 @@ public class Pronostikoa {
 	
 	public double getKuota() {
 		return kuota;
+	}
+	
+	public String getEmaitza() {
+		return this.Emaitza;
+	}
+	
+	@Override
+	public String toString() {
+		return "Emaitza: " + this.Emaitza + ", eta " + "kuota: " + this.kuota; 
 	}
 }

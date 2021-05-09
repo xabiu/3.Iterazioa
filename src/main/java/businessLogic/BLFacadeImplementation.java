@@ -1,5 +1,6 @@
 package businessLogic;
 
+import java.util.ArrayList;
 //hola
 import java.util.Date;
 import java.util.List;
@@ -206,9 +207,9 @@ public class BLFacadeImplementation implements BLFacade {
 	}
 
 	@Override
-	public void pronostikoaSortu(double kuota, int pronostikoZb) {
+	public void pronostikoaSortu(double kuota, int pronostikoZb, int z2, String Emaitza) {
 		dbManager.open(false);
-		dbManager.pronostikoaSortu(kuota, pronostikoZb);
+		dbManager.pronostikoaSortu(kuota, pronostikoZb, z2, Emaitza);
 		dbManager.close();
 	}
 
@@ -246,6 +247,43 @@ public class BLFacadeImplementation implements BLFacade {
 	public void gertaeraKendu(Event e) {
 		dbManager.open(false);
 		dbManager.gertaeraKendu(e.getEventNumber());
+		dbManager.close();
+	}
+
+	@Override
+	public Question galderaLortu(int i) {
+		dbManager.open(false);
+		Question q = dbManager.galderaLortu(i);
+		dbManager.close();
+		return q;
+		
+	}
+
+	@Override
+	public int pronostikoHandienaLortu() {
+		dbManager.open(false);
+		List<Pronostikoa> l = dbManager.pronostikoHandienaLortu();
+		int max = 0;
+		for(Pronostikoa p: l) {
+			if(p.getPronostikoZb()>max) {
+				max = p.getPronostikoZb();
+			}
+		}
+		return max + 1;
+	}
+
+	@Override
+	public int zenbakiAnitzHandienaLortu() {
+		dbManager.open(false);
+		int i = dbManager.zenbakiAnitzHandienaLortu();
+		dbManager.close();
+		return i;
+	}
+
+	@Override
+	public void apustuAnitzaEgin(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l) {
+		dbManager.open(false);
+		dbManager.apostuAnitzaSortu(Zb, dirua, NAN, kuotaM, l);
 		dbManager.close();
 	}
 
