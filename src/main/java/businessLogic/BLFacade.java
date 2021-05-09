@@ -7,6 +7,7 @@ import java.util.Date;
 //import domain.Booking;
 import domain.Question;
 import domain.Admin;
+import domain.ApostuAnitza;
 import domain.Erabiltzailea;
 import domain.Erregistratua;
 import domain.Event;
@@ -139,4 +140,16 @@ public interface BLFacade {
 	
 	@WebMethod
 	public void apustuAnitzaEgin(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l);
+	
+	@WebMethod
+	public void listatikKendu(int Zb, Pronostikoa p1);
+	
+	@WebMethod
+	public void erabilgarritasunaKendu(int z);
+	
+	@WebMethod
+	public ApostuAnitza apostuAnitzaLortu(int z);
+	
+	@WebMethod
+	public void apostuAnitzaKendu(int z);
 }

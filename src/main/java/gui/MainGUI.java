@@ -143,10 +143,11 @@ public class MainGUI extends JFrame {
 		if (jButtonCreateQuery == null) {
 			jButtonCreateQuery = new JButton();
 			jButtonCreateQuery.setBounds(0, 104, 477, 53);
+			JFrame a1 = this;
 			jButtonCreateQuery.setText("Login"/* ResourceBundle.getBundle("Etiquetas").getString("CreateQuery") */);
 			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					JFrame a = new LoginGUI();
+					JFrame a = new LoginGUI(a1);
 					a.setVisible(true);
 
 				}

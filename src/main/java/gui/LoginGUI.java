@@ -46,11 +46,15 @@ public class LoginGUI extends JFrame {
 			}
 		});
 	}
+	
+	public LoginGUI() {
+		super();
+	}
 
 	/**
 	 * Create the frame.
 	 */
-	public LoginGUI() {
+	public LoginGUI(JFrame aurrekoa) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

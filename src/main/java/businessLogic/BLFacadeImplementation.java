@@ -14,6 +14,7 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import domain.Question;
 import domain.Admin;
+import domain.ApostuAnitza;
 import domain.Erabiltzailea;
 import domain.Erregistratua;
 import domain.Event;
@@ -283,7 +284,37 @@ public class BLFacadeImplementation implements BLFacade {
 	@Override
 	public void apustuAnitzaEgin(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l) {
 		dbManager.open(false);
+		System.out.println(Zb);
 		dbManager.apostuAnitzaSortu(Zb, dirua, NAN, kuotaM, l);
+		dbManager.close();
+	}
+
+	@Override
+	public void listatikKendu(int Zb, Pronostikoa p1) {
+		dbManager.open(false);
+		dbManager.listatikKendu(Zb, p1);
+		dbManager.close();
+	}
+
+	@Override
+	public void erabilgarritasunaKendu(int z) {
+		dbManager.open(false);
+		dbManager.erabilgarritasunaKendu(z);
+		dbManager.close();
+	}
+
+	@Override
+	public ApostuAnitza apostuAnitzaLortu(int z) {
+		dbManager.open(false);
+		ApostuAnitza aa = dbManager.apostuAnitzaLortu(z);
+		dbManager.close();
+		return aa;
+	}
+
+	@Override
+	public void apostuAnitzaKendu(int z) {
+		dbManager.open(false);
+		dbManager.apostuAnitzakKendu(z);
 		dbManager.close();
 	}
 

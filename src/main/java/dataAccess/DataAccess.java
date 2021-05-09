@@ -389,8 +389,10 @@ public class DataAccess {
 		List<ApostuAnitza> l = query.getResultList();
 		db.getTransaction().commit();
 		if(l == null) {
+			System.out.println("entra1");
 			return 0;
 		}else {
+			System.out.println("entra2");
 			int handiena = 0;
 			for(ApostuAnitza a:l) {
 				if(a.getZenbakia()>handiena) {
@@ -401,8 +403,16 @@ public class DataAccess {
 		}
 	}
 	
+	public void apostuAnitzakKendu(int z) {
+		db.getTransaction().begin();
+		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
+		db.remove(aa);
+		db.getTransaction().commit();
+	}
+	
 	public void apostuAnitzaSortu(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l) {
 		db.getTransaction().begin();
+		System.out.println(Zb);
 		ApostuAnitza a = new ApostuAnitza(Zb,dirua,NAN,kuotaM,l);
 		db.persist(a);
 		for(Pronostikoa p: l) {
@@ -410,6 +420,27 @@ public class DataAccess {
 			p1.apustuAnitzaGehitu(a);
 		}
 		db.getTransaction().commit();
+	}
+	
+	public void listatikKendu(int z, Pronostikoa p1) {
+		db.getTransaction().begin();
+		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
+		aa.listatikKenu(p1);
+		db.getTransaction().commit();
+	}
+	
+	public void erabilgarritasunaKendu(int z) {
+		db.getTransaction().begin();
+		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
+		aa.erabilgarritasunaKendu();
+		db.getTransaction().commit();
+	}
+	
+	public ApostuAnitza apostuAnitzaLortu(int z) {
+		db.getTransaction().begin();
+		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
+		db.getTransaction().commit();
+		return aa;
 	}
 
 	public void open(boolean initializeMode) {

@@ -18,7 +18,7 @@ public class Pronostikoa {
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 	private Vector<Apustua> apustuak=new Vector<Apustua>();
 	
-	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	@OneToMany(fetch=FetchType.EAGER)
 	private Vector<ApostuAnitza> apustuAnitzak=new Vector<ApostuAnitza>();
 	private String Emaitza;
 	
@@ -67,6 +67,10 @@ public class Pronostikoa {
 	
 	public String getEmaitza() {
 		return this.Emaitza;
+	}
+	
+	public List<ApostuAnitza> getApostuAnitzak(){
+		return this.apustuAnitzak;
 	}
 	
 	@Override

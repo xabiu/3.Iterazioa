@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import businessLogic.BLFacade;
+import domain.ApostuAnitza;
 import domain.Apustua;
 import domain.Erregistratua;
 import domain.Event;
@@ -128,6 +129,7 @@ public class EmaitzakIpiniGUI extends JFrame {
 						 if(!p2.isEmpty()) {
 							 for(Pronostikoa p: p2) {
 								List<Apustua> list2 = p.getApustuak();
+								List<ApostuAnitza> list3 = p.getApostuAnitzak();
 									 if(list2 != null) {
 									 for(Apustua ap: list2) {
 										 if(ap.getEmaitza().equals(emaitza)) {
@@ -139,6 +141,32 @@ public class EmaitzakIpiniGUI extends JFrame {
 										 }
 									 }
 								 }
+									 if(list3 != null) {
+										 System.out.println("apustu anitzak");
+										 for(ApostuAnitza ab: list3) {
+											ApostuAnitza aa = bf.apostuAnitzaLortu(ab.getZenbakia());
+											if(p.getPronostikoZb() == p1.getPronostikoZb()) {
+												 if(aa.badagoListan(p) && aa.erabilgarritasunaLortu()) {
+													 System.out.println("badago listan");
+													 bf.listatikKendu(aa.getZenbakia(), p1);
+												 }
+											}else {
+												if(aa.badagoListan(p) && aa.erabilgarritasunaLortu()) {
+													bf.erabilgarritasunaKendu(aa.getZenbakia());
+												}
+											}
+											ApostuAnitza ac = bf.apostuAnitzaLortu(aa.getZenbakia());
+											if(ac.apostuenListaLortu().isEmpty() && ac.erabilgarritasunaLortu()) {
+												Erregistratua e3 = bf.ErregistratuaBilatu(ac.getNAN());
+												bf.diruaSartu(ac.getDirua()*ac.getKuota() + e3.getDirua(), e3.getIz(), e3.getPasahitza());
+												bf.apostuAnitzaKendu(ac.getZenbakia());
+											}else {
+												if(!ac.erabilgarritasunaLortu()) {
+													bf.apostuAnitzaKendu(ac.getZenbakia());
+												}
+											}
+										 }
+									 }
 							 }
 						 }
 					 }
@@ -174,22 +202,51 @@ public class EmaitzakIpiniGUI extends JFrame {
 							 System.out.println("pronostikoak");
 							 for(Pronostikoa p: p2) {
 								List<Apustua> list2 = p.getApustuak();
+								List<ApostuAnitza> list3 = p.getApostuAnitzak();
 									 if(list2 != null) {
-									 for(Apustua ap: list2) {
-										 System.out.println("apustuak");
-										 if(ap.getEmaitza().equals(emaitza)) {
-											 System.out.println("sartu da");
-											 Erregistratua e2 = bf.ErregistratuaBilatu(ap.getNAN());
-											 double d1 = ap.getDirua()*p.getKuota();
-											 System.out.println(d1);
-											 bf.diruaSartu(e2.getDirua() + d1, e2.getIz(), e2.getPasahitza());
+										 for(Apustua ap: list2) {
+											 System.out.println("apustuak");
+											 if(ap.getEmaitza().equals(emaitza)) {
+												 System.out.println("sartu da");
+												 Erregistratua e2 = bf.ErregistratuaBilatu(ap.getNAN());
+												 double d1 = ap.getDirua()*p.getKuota();
+												 System.out.println(d1);
+												 bf.diruaSartu(e2.getDirua() + d1, e2.getIz(), e2.getPasahitza());
+											 }
 										 }
 									 }
-								 }
-							 }
-						 }
-					 }
-				}
+									 if(list3 != null) {
+										 System.out.println("apustu anitzak");
+										 for(ApostuAnitza ab: list3) {
+											 ApostuAnitza aa = bf.apostuAnitzaLortu(ab.getZenbakia());
+											if(p.getPronostikoZb() == p1.getPronostikoZb()) {
+												 if(aa.badagoListan(p) && aa.erabilgarritasunaLortu()) {
+													 bf.listatikKendu(aa.getZenbakia(), p);
+												 }
+											}else {
+												System.out.println("2");
+												if(aa.badagoListan(p) && aa.erabilgarritasunaLortu()){
+													bf.erabilgarritasunaKendu(aa.getZenbakia());
+												}
+											}
+											ApostuAnitza ac = bf.apostuAnitzaLortu(aa.getZenbakia());
+											if(ac.apostuenListaLortu().isEmpty() && ac.erabilgarritasunaLortu()) {
+												System.out.println("3");
+												Erregistratua e3 = bf.ErregistratuaBilatu(ac.getNAN());
+												bf.diruaSartu(ac.getDirua()*ac.getKuota(), e3.getIz(), e3.getPasahitza());
+												bf.apostuAnitzaKendu(ac.getZenbakia());
+											}else {
+												if(!ac.erabilgarritasunaLortu()) {
+													System.out.println("4");
+													bf.apostuAnitzaKendu(ac.getZenbakia());
+												}
+											}
+										 }
+									 }
+							 	}
+						 	}
+					 	}
+				 	}
 				}
 				}
 				//a++;
