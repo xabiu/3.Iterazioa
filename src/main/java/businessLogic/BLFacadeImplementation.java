@@ -318,4 +318,19 @@ public class BLFacadeImplementation implements BLFacade {
 		dbManager.close();
 	}
 
+	@Override
+	public void erreplikatu(String noriNAN, Erregistratua e) {
+		dbManager.open(false);
+		dbManager.erreplikatu(noriNAN, e);
+		dbManager.close();
+	}
+
+	@Override
+	public List<Erregistratua> erabiltzaileGuztiakLortu() {
+		dbManager.open(false);
+		List<Erregistratua> e = dbManager.erabiltzaileGuztiakLortu();
+		dbManager.close();
+		return e;
+	}
+
 }

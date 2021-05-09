@@ -436,6 +436,22 @@ public class DataAccess {
 		db.getTransaction().commit();
 	}
 	
+	public void erreplikatu(String NAN1, Erregistratua e) {
+		Erregistratua aa = this.ErregistratuaLortu(NAN1);
+		db.getTransaction().begin();
+		System.out.println(aa);
+		aa.erreplikatuaGehitu(e);
+		db.getTransaction().commit();
+	}
+	
+	public List<Erregistratua> erabiltzaileGuztiakLortu(){
+		db.getTransaction().begin();
+		TypedQuery<Erregistratua> query = db.createQuery("SELECT ap FROM Erregistratua ap ",Erregistratua.class);
+		List<Erregistratua> l = query.getResultList();
+		db.getTransaction().commit();
+		return l;
+	}
+	
 	public ApostuAnitza apostuAnitzaLortu(int z) {
 		db.getTransaction().begin();
 		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
