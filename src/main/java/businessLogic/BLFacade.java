@@ -159,4 +159,12 @@ public interface BLFacade {
 	
 	@WebMethod
 	public List<Erregistratua> erabiltzaileGuztiakLortu();
+	
+	@WebMethod
+	public void kenduBonoBat(String NAN) ;
+	
+	@WebMethod
+	public void bonoakEguneratu(String NAN, int z);
+		
+	
 }

@@ -43,13 +43,13 @@ public class ErregistratuGUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ErregistratuGUI(String izena, String pasahitza) {
+	public ErregistratuGUI(String izena, String pasahitza, JFrame main) {
 		BLFacade bl = MainGUI.getBusinessLogic();
 		Erregistratua e = (Erregistratua) bl.erabiltzaileaBadago(izena, pasahitza);
 		JFrame unekoframe = this;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 344);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -95,12 +95,23 @@ public class ErregistratuGUI extends JFrame {
 		});
 		contentPane.add(btnNewButton_3);
 		
+		JButton btnNewButton_4 = new JButton("Amaitu Saioa");
+		btnNewButton_4.setBounds(12, 188, 408, 43);
+		JFrame s = this;
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				s.setVisible(false);
+				main.setVisible(true);
+			}
+		});
+		contentPane.add(btnNewButton_4);
+		
 		JLabel lblNewLabel = new JLabel("Zure dirua :");
-		lblNewLabel.setBounds(51, 208, 83, 32);
+		lblNewLabel.setBounds(51, 252, 83, 32);
 		contentPane.add(lblNewLabel);
 	
 		JLabel lblNewLabel_1 = new JLabel(Double.toString(e.getDirua()));
-		lblNewLabel_1.setBounds(182, 216, 56, 16);
+		lblNewLabel_1.setBounds(182, 260, 56, 16);
 		contentPane.add(lblNewLabel_1);
 	}
 }

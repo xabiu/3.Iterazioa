@@ -333,4 +333,18 @@ public class BLFacadeImplementation implements BLFacade {
 		return e;
 	}
 
+	@Override
+	public void kenduBonoBat(String NAN) {
+		dbManager.open(false);
+		dbManager.bonoBatKendu(NAN);
+		dbManager.close();
+	}
+
+	@Override
+	public void bonoakEguneratu(String NAN, int z) {
+		dbManager.open(false);
+		dbManager.bonoakEguneratu(z, NAN);
+		dbManager.close();
+	}
+
 }

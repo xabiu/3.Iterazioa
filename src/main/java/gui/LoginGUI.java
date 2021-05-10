@@ -118,11 +118,11 @@ public class LoginGUI extends JFrame {
 						boolean emaitza = bl.erabiltzaileZuzena(izena, pasahitza);
 						if (emaitza) {
 							if (mota == 1) {
-								AdminGUI a = new AdminGUI(izena,pasahitza);
+								AdminGUI a = new AdminGUI(izena,pasahitza,aurrekoa);
 								a.setVisible(true);
 								contentPane.setVisible(false);
 							}else {
-								ErregistratuGUI e = new ErregistratuGUI(izena,pasahitza);
+								ErregistratuGUI e = new ErregistratuGUI(izena,pasahitza, aurrekoa);
 								e.setVisible(true);
 								contentPane.setVisible(false);
 							}

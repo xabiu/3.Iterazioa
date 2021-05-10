@@ -452,11 +452,25 @@ public class DataAccess {
 		return l;
 	}
 	
+	public void bonoBatKendu(String NAN) {
+		Erregistratua aa = this.ErregistratuaLortu(NAN);
+		db.getTransaction().begin();
+		aa.bonoBatKendu();
+		db.getTransaction().commit();
+	}
+	
 	public ApostuAnitza apostuAnitzaLortu(int z) {
 		db.getTransaction().begin();
 		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
 		db.getTransaction().commit();
 		return aa;
+	}
+	
+	public void bonoakEguneratu(int z, String NAN) {
+		Erregistratua aa = this.ErregistratuaLortu(NAN);
+		db.getTransaction().begin();
+		aa.bonoakEguneratu(z);
+		db.getTransaction().commit();
 	}
 
 	public void open(boolean initializeMode) {
