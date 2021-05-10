@@ -12,18 +12,15 @@ Proiektu honen helburua, hiru mailako software arkitektura batean diseinatutako 
 ### Eskakizunen Bilaketa
 
 #### Domeinuaren eredua (Entitateak/Erlazioak)
-- **Event**: Partidoak adierazteko data zehatz batean sortu daitekeen gertaera klasea.
-  - Erlazioak: Questionekin erlazioa dauka, Event klaseak gertaera horren galdera guztiak gordetzen dituelako.
-- **Question**: Gertaera batean partidari buruzko galderen klasea.
-  - Erlazioak: Event-rekin erlazioa dauka galdera zein gertaerarena den jakiteko eta Pronostikoarekin galderaren pronostikoak gordetzeko.
-- **Pronostikoa**: Galdera bati buruzko pronostikoen klasea.
-  - Erlazioak: Apusturekin eta Apustuanitzekin erlazioa dauka erabiltzaileak zein pronostikoan apostu egin duen jakiteko.
-- **Apostua**: Pronostiko batean apostu bat egiteko klasea.
-  - Erlazioak: Ez.
-- **Apostu Anutzak**: Pronostiko batean apostu anitz egiteko klasea.
-  - Erlazioak: Ez.
-- **Erregistratua**: Erabizaile erregistratua sortzeko klasea.
-  - Erlazioak: Apostua eta Apostu Anitzekin erlazioa dago erabiltzaileak bere apostuak gordeko dituelako.
-- **Erabiltzailea**: Erabiltzaile klase orokorra.
-  - Erlazioak: Erregistratua eta Adminekin erlazioa dauka bi hauen klase gurasoa delako.
-- **Admin**: Administradore motako erabiltzailea.
+|**Klasea**|**Deskripzioa**|**Erlazioa**|
+|---|---|---|
+|**Event**|Partidoak adierazteko data zehatz batean sortu daitekeen gertaera klasea.|Questionekin erlazioa dauka, Event klaseak gertaera horren galdera guztiak gordetzen dituelako.|
+|**Question**|Gertaera batean partidari buruzko galderen klasea.|Erlazioak: Event-rekin erlazioa dauka galdera zein gertaerarena den jakiteko eta Pronostikoarekin galderaren pronostikoak gordetzeko.|
+|**Pronostikoa**|Galdera bati buruzko pronostikoen klasea.|Apusturekin eta Apustuanitzekin erlazioa dauka erabiltzaileak zein pronostikoan apostu egin duen jakiteko.|
+|**Apostua**|Pronostiko batean apostu bat egiteko klasea.|Ez.|
+|**Apostu Anitzak**|Pronostiko batean apostu anitz egiteko klasea.|Ez.|
+|**Erregistratua**|Erabizaile erregistratua sortzeko klasea.|Apostua, Apostu Anitzekin eta Erabiltzailearekin erlazioa dago erabiltzaileak bere apostuak gordeko dituelako.|
+|**Erabiltzailea**|Erabiltzaile klase orokorra.|Erregistratua eta Adminekin erlazioa dauka bi hauen klase gurasoa delako.|
+|**Admin**|Administradore motako erabiltzailea.|Erabiltzailearekin erlazioa dago admina erabiltzailearen klase umea delako.|
+
+#### Erabilpen kasuen eredua
