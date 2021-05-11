@@ -1,4 +1,3 @@
-
 package domain;
 
 import java.io.Serializable;
@@ -13,20 +12,26 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @SuppressWarnings("serial")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
 public class Pronostikoa implements Serializable {
-	private double kuota;
-	@Id
+	
+	@Id @GeneratedValue
+	@XmlID
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
 	private int pronostikoZb;
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	private Vector<Apustua> apustuak = new Vector<Apustua>();
-
-	@OneToMany(fetch = FetchType.EAGER)
-	private Vector<ApostuAnitza> apustuAnitzak = new Vector<ApostuAnitza>();
 	private String Emaitza;
+	private double kuota;
+
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+	private Vector<Apustua> apustuak = new Vector<Apustua>();
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+	private Vector<ApostuAnitza> apustuAnitzak = new Vector<ApostuAnitza>();
 
 	public Pronostikoa() {
 		super();
@@ -35,16 +40,16 @@ public class Pronostikoa implements Serializable {
 	public Pronostikoa(double kuota, int pronostikoZb) {
 		this.kuota = kuota;
 		this.pronostikoZb = pronostikoZb;
-		apustuak = new Vector<Apustua>();
-		apustuAnitzak = new Vector<ApostuAnitza>();
+//		apustuak = new Vector<Apustua>();
+//		apustuAnitzak = new Vector<ApostuAnitza>();
 	}
 
 	public Pronostikoa(double kuota, int pronostikoZb, String emaitza) {
 		this.kuota = kuota;
 		this.pronostikoZb = pronostikoZb;
-		apustuak = new Vector<Apustua>();
 		this.Emaitza = emaitza;
-		apustuAnitzak = new Vector<ApostuAnitza>();
+//		apustuak = new Vector<Apustua>();
+//		apustuAnitzak = new Vector<ApostuAnitza>();
 	}
 
 	public void apustuaGehitu(Apustua a) {

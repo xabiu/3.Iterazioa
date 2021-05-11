@@ -7,15 +7,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlSeeAlso;
 
 @SuppressWarnings("serial")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
+@XmlSeeAlso ({Erregistratua.class, Admin.class})
+
 public abstract class Erabiltzailea implements Serializable{
 
 	// private int nanZb;
 	// private char nanL;
 	@Id
+	@XmlID
 	private String iz;
 
 	private String nan;

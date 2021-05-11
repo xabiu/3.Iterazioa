@@ -62,7 +62,7 @@ public class ApplicationLauncher {
 				QName qname = new QName("http://businessLogic/", "BLFacadeImplementationService");
 
 				Service service = Service.create(url, qname);
-//				Endpoint.publish(serviceName, service);
+
 				appFacadeInterface = service.getPort(BLFacade.class);
 			}
 			/*

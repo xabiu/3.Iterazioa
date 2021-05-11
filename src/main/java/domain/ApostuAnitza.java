@@ -21,12 +21,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @Entity
 public class ApostuAnitza implements Serializable {
 	@Id
-	@XmlJavaTypeAdapter(IntegerAdapter.class)
 	@XmlID
-	private int apostuZB;
-	private boolean egoera; // true bada apostua oraindik begira dezakegu, bestela ez.
-	private double dirua;
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
 	private String erabNAN;
+	private int apostuZB;
+	private double dirua;
+
+	private boolean egoera; // true bada apostua oraindik begira dezakegu, bestela ez.
 	private double kuotaMetatua;
 	@OneToMany(fetch = FetchType.EAGER)
 	private ArrayList<Pronostikoa> pronoLista = new ArrayList<Pronostikoa>();
