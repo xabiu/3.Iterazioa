@@ -1,16 +1,23 @@
 package domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+
+@SuppressWarnings("serial")
+@XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-public abstract class Erabiltzailea {
+public abstract class Erabiltzailea implements Serializable{
 
 	// private int nanZb;
 	// private char nanL;
 	@Id
 	private String iz;
-	
+
 	private String nan;
 	private String adina;
 	private String pasahitza;

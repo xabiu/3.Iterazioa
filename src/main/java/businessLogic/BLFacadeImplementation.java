@@ -207,21 +207,21 @@ public class BLFacadeImplementation implements BLFacade {
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public void pronostikoaSortu(double kuota, int pronostikoZb, int z2, String Emaitza) {
 		dbManager.open(false);
 		dbManager.pronostikoaSortu(kuota, pronostikoZb, z2, Emaitza);
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public void apustuaEgin(Pronostikoa p, String emaitza, double dirua, String erabNAN, int z) {
 		dbManager.open(false);
 		dbManager.apustuaEgin(p, emaitza, dirua, erabNAN, z);
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public int zenbakiHandienaLortu() {
 		dbManager.open(false);
 		int z = dbManager.getApostuZbHandiena();
@@ -229,14 +229,14 @@ public class BLFacadeImplementation implements BLFacade {
 		return z;
 	}
 
-	@Override
+	@WebMethod
 	public void emaitzaIpini(Question q, String e) {
 		dbManager.open(false);
 		dbManager.emaitzaIpini(q, e);
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public Erregistratua ErregistratuaBilatu(String NAN) {
 		dbManager.open(false);
 		Erregistratua e = dbManager.ErregistratuaLortu(NAN);
@@ -244,14 +244,14 @@ public class BLFacadeImplementation implements BLFacade {
 		return e;
 	}
 
-	@Override
+	@WebMethod
 	public void gertaeraKendu(Event e) {
 		dbManager.open(false);
 		dbManager.gertaeraKendu(e.getEventNumber());
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public Question galderaLortu(int i) {
 		dbManager.open(false);
 		Question q = dbManager.galderaLortu(i);
@@ -260,7 +260,7 @@ public class BLFacadeImplementation implements BLFacade {
 
 	}
 
-	@Override
+	@WebMethod
 	public int pronostikoHandienaLortu() {
 		dbManager.open(false);
 		List<Pronostikoa> l = dbManager.pronostikoHandienaLortu();
@@ -273,7 +273,7 @@ public class BLFacadeImplementation implements BLFacade {
 		return max + 1;
 	}
 
-	@Override
+	@WebMethod
 	public int zenbakiAnitzHandienaLortu() {
 		dbManager.open(false);
 		int i = dbManager.zenbakiAnitzHandienaLortu();
@@ -281,7 +281,7 @@ public class BLFacadeImplementation implements BLFacade {
 		return i;
 	}
 
-	@Override
+	@WebMethod
 	public void apustuAnitzaEgin(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l) {
 		dbManager.open(false);
 		System.out.println(Zb);
@@ -289,21 +289,21 @@ public class BLFacadeImplementation implements BLFacade {
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public void listatikKendu(int Zb, Pronostikoa p1) {
 		dbManager.open(false);
 		dbManager.listatikKendu(Zb, p1);
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public void erabilgarritasunaKendu(int z) {
 		dbManager.open(false);
 		dbManager.erabilgarritasunaKendu(z);
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public ApostuAnitza apostuAnitzaLortu(int z) {
 		dbManager.open(false);
 		ApostuAnitza aa = dbManager.apostuAnitzaLortu(z);
@@ -311,21 +311,21 @@ public class BLFacadeImplementation implements BLFacade {
 		return aa;
 	}
 
-	@Override
+	@WebMethod
 	public void apostuAnitzaKendu(int z) {
 		dbManager.open(false);
 		dbManager.apostuAnitzakKendu(z);
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public void erreplikatu(String noriNAN, Erregistratua e) {
 		dbManager.open(false);
 		dbManager.erreplikatu(noriNAN, e);
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public List<Erregistratua> erabiltzaileGuztiakLortu() {
 		dbManager.open(false);
 		List<Erregistratua> e = dbManager.erabiltzaileGuztiakLortu();
@@ -333,14 +333,14 @@ public class BLFacadeImplementation implements BLFacade {
 		return e;
 	}
 
-	@Override
+	@WebMethod
 	public void kenduBonoBat(String NAN) {
 		dbManager.open(false);
 		dbManager.bonoBatKendu(NAN);
 		dbManager.close();
 	}
 
-	@Override
+	@WebMethod
 	public void bonoakEguneratu(String NAN, int z) {
 		dbManager.open(false);
 		dbManager.bonoakEguneratu(z, NAN);

@@ -90,6 +90,7 @@ public class GertaerakSortuGUI extends JFrame {
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 
+		GertaerakSortuGUI g = this;
 		JButton btnNewButton = new JButton("Gertaera sortu");
 		btnNewButton.setBounds(130, 215, 142, 25);
 		btnNewButton.addActionListener(new ActionListener() {
@@ -100,7 +101,7 @@ public class GertaerakSortuGUI extends JFrame {
 					int zenb = f.getGertaeraHandienaLortu() + 1;
 					String azalpena = textField.getText();
 					int eguna = Integer.parseInt(textField_1.getText());
-					int hilabetea = Integer.parseInt(textField_2.getText());
+					int hilabetea = Integer.parseInt(textField_2.getText())-1;
 					int urte = Integer.parseInt(textField_3.getText());
 					if (urte > 1900) {
 						urte = urte - 1900;
@@ -111,7 +112,7 @@ public class GertaerakSortuGUI extends JFrame {
 					f.gertaeraSortu(azalpena, d, zenb);
 					System.out.println("gertaera datu basean sartu da.");
 					aurrekoframe.setVisible(true);
-					contentPane.setVisible(false);
+					g.setVisible(false);
 				} catch (Exception e1) {
 					System.out.println("Datu guztiak sartu");
 				}
