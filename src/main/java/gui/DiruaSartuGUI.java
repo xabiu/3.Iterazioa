@@ -35,7 +35,7 @@ public class DiruaSartuGUI extends JFrame {
 			}
 		});
 	}
-	
+
 	public DiruaSartuGUI() {
 		super();
 	}
@@ -50,18 +50,19 @@ public class DiruaSartuGUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblNewLabel = new JLabel("Zenbat euro sartu nahi dituzu?");
 		lblNewLabel.setBounds(12, 13, 181, 16);
 		contentPane.add(lblNewLabel);
-		
+
 		textField = new JTextField();
 		textField.setBounds(22, 37, 139, 22);
 		contentPane.add(textField);
 		textField.setColumns(10);
-		
+
 		JButton btnNewButton = new JButton("Sartu dirua");
 		btnNewButton.setBounds(44, 72, 97, 25);
+		DiruaSartuGUI d = this;
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e1) {
 				MainGUI a = new MainGUI();
@@ -69,7 +70,7 @@ public class DiruaSartuGUI extends JFrame {
 				double dirua2 = Double.parseDouble(textField.getText());
 				bf.diruaSartu(dirua + dirua2, izena, pasahitza);
 				System.out.println("dirua sartu da");
-				contentPane.setVisible(false);
+				d.setVisible(false);
 				aurrekoframe.setVisible(true);
 			}
 		});

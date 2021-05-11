@@ -226,7 +226,7 @@ public class DataAccess {
 		}
 		return null;
 	}
-	
+
 	public Erabiltzailea erabiltzaileaBadago2(String erabiltzailea, String pasahitza) {
 		Erabiltzailea erab;
 		if ((erab = db.find(Erregistratua.class, erabiltzailea)) != null) {
@@ -265,90 +265,92 @@ public class DataAccess {
 		}
 		return res;
 	}
-	
+
 	public List<Pronostikoa> pronostikoHandienaLortu() {
 		db.getTransaction().begin();
-		TypedQuery<Pronostikoa> query = db.createQuery("SELECT p FROM Pronostikoa p ",Pronostikoa.class);
+		TypedQuery<Pronostikoa> query = db.createQuery("SELECT p FROM Pronostikoa p ", Pronostikoa.class);
 		List<Pronostikoa> l = query.getResultList();
 		db.getTransaction().commit();
 		return l;
 	}
-	
+
 	public List<Event> getGertaeraHandiena() {
 		db.getTransaction().begin();
-		TypedQuery<Event> query = db.createQuery("SELECT e FROM Event e ",Event.class);
+		TypedQuery<Event> query = db.createQuery("SELECT e FROM Event e ", Event.class);
 		List<Event> l = query.getResultList();
 		db.getTransaction().commit();
 		return l;
 	}
-	
+
 	public int getApostuZbHandiena() {
 		db.getTransaction().begin();
-		TypedQuery<Apustua> query = db.createQuery("SELECT ap FROM Apustua ap ",Apustua.class);
+		TypedQuery<Apustua> query = db.createQuery("SELECT ap FROM Apustua ap ", Apustua.class);
 		List<Apustua> l = query.getResultList();
 		db.getTransaction().commit();
-		if(l == null) {
+		if (l == null) {
 			return 0;
-		}else {
+		} else {
 			int handiena = 0;
-			for(Apustua a:l) {
-				if(a.getZenbakia()>handiena) {
+			for (Apustua a : l) {
+				if (a.getZenbakia() > handiena) {
 					handiena = a.getZenbakia();
 				}
 			}
 			return handiena;
 		}
-		
+
 	}
-	public void gertaeraSortu(String azalpena,Date date,int zenb) {
+
+	public void gertaeraSortu(String azalpena, Date date, int zenb) {
 		db.getTransaction().begin();
-		Event e = new Event(zenb,azalpena,date);
+		Event e = new Event(zenb, azalpena, date);
 		db.persist(e);
 		db.getTransaction().commit();
 	}
-	
+
 	public void pronostikoaSortu(double kuota, int pronostikoZb, int z2, String e) {
 		db.getTransaction().begin();
-		Pronostikoa p = new Pronostikoa(kuota,pronostikoZb,e);
+		Pronostikoa p = new Pronostikoa(kuota, pronostikoZb, e);
 		Question q = db.find(Question.class, z2);
 		q.pronostikoaGehitu(p);
 		db.persist(p);
 		db.getTransaction().commit();
 	}
-	
+
 	public void emaitzaIpini(Question q, String em) {
 		db.getTransaction().begin();
 		Question q1 = db.find(Question.class, q.getQuestionNumber());
 		q1.setResult(em);
 		db.getTransaction().commit();
 	}
-	
-	public void apustuaEgin(Pronostikoa p, String emaitza, double dirua, String erabNAN,int z) {
+
+	public void apustuaEgin(Pronostikoa p, String emaitza, double dirua, String erabNAN, int z) {
 		db.getTransaction().begin();
 		Pronostikoa p1 = db.find(Pronostikoa.class, p.getPronostikoZb());
-		Apustua a = new Apustua(emaitza,dirua,erabNAN,z);
+		Apustua a = new Apustua(emaitza, dirua, erabNAN, z);
 		db.persist(a);
 		p1.apustuaGehitu(a);
 		db.getTransaction().commit();
 	}
-	
+
 	public void diruaSartu(double dirua, String iz, String pas) {
 		Erregistratua e = (Erregistratua) this.erabiltzaileaBadago2(iz, pas);
 		db.getTransaction().begin();
 		e.setDirua(dirua);
 		db.getTransaction().commit();
 	}
-	
+
 	public Erregistratua ErregistratuaLortu(String NAN) {
 		db.getTransaction().begin();
-		TypedQuery<Erregistratua> query = db.createQuery("SELECT e FROM Erregistratua e WHERE e.nan =? 1 ",Erregistratua.class);
+		TypedQuery<Erregistratua> query = db.createQuery("SELECT e FROM Erregistratua e WHERE e.nan =? 1 ",
+				Erregistratua.class);
 		query.setParameter(1, NAN);
 		List<Erregistratua> e1 = query.getResultList();
 		Erregistratua e = e1.get(0);
 		db.getTransaction().commit();
 		return e;
 	}
-	
+
 	public void gertaeraKendu(int e) {
 		db.getTransaction().begin();
 		Event e1 = db.find(Event.class, e);
@@ -381,61 +383,60 @@ public class DataAccess {
 		}
 		return res;
 	}
-	
-	
+
 	public int zenbakiAnitzHandienaLortu() {
 		db.getTransaction().begin();
-		TypedQuery<ApostuAnitza> query = db.createQuery("SELECT ap FROM ApostuAnitza ap ",ApostuAnitza.class);
+		TypedQuery<ApostuAnitza> query = db.createQuery("SELECT ap FROM ApostuAnitza ap ", ApostuAnitza.class);
 		List<ApostuAnitza> l = query.getResultList();
 		db.getTransaction().commit();
-		if(l == null) {
+		if (l == null) {
 			System.out.println("entra1");
 			return 0;
-		}else {
+		} else {
 			System.out.println("entra2");
 			int handiena = 0;
-			for(ApostuAnitza a:l) {
-				if(a.getZenbakia()>handiena) {
+			for (ApostuAnitza a : l) {
+				if (a.getZenbakia() > handiena) {
 					handiena = a.getZenbakia();
 				}
 			}
 			return handiena;
 		}
 	}
-	
+
 	public void apostuAnitzakKendu(int z) {
 		db.getTransaction().begin();
 		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
 		db.remove(aa);
 		db.getTransaction().commit();
 	}
-	
+
 	public void apostuAnitzaSortu(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l) {
 		db.getTransaction().begin();
 		System.out.println(Zb);
-		ApostuAnitza a = new ApostuAnitza(Zb,dirua,NAN,kuotaM,l);
+		ApostuAnitza a = new ApostuAnitza(Zb, dirua, NAN, kuotaM, l);
 		db.persist(a);
-		for(Pronostikoa p: l) {
+		for (Pronostikoa p : l) {
 			Pronostikoa p1 = db.find(Pronostikoa.class, p.getPronostikoZb());
 			p1.apustuAnitzaGehitu(a);
 		}
 		db.getTransaction().commit();
 	}
-	
+
 	public void listatikKendu(int z, Pronostikoa p1) {
 		db.getTransaction().begin();
 		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
 		aa.listatikKenu(p1);
 		db.getTransaction().commit();
 	}
-	
+
 	public void erabilgarritasunaKendu(int z) {
 		db.getTransaction().begin();
 		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
 		aa.erabilgarritasunaKendu();
 		db.getTransaction().commit();
 	}
-	
+
 	public void erreplikatu(String NAN1, Erregistratua e) {
 		Erregistratua aa = this.ErregistratuaLortu(NAN1);
 		db.getTransaction().begin();
@@ -443,29 +444,29 @@ public class DataAccess {
 		aa.erreplikatuaGehitu(e);
 		db.getTransaction().commit();
 	}
-	
-	public List<Erregistratua> erabiltzaileGuztiakLortu(){
+
+	public List<Erregistratua> erabiltzaileGuztiakLortu() {
 		db.getTransaction().begin();
-		TypedQuery<Erregistratua> query = db.createQuery("SELECT ap FROM Erregistratua ap ",Erregistratua.class);
+		TypedQuery<Erregistratua> query = db.createQuery("SELECT ap FROM Erregistratua ap ", Erregistratua.class);
 		List<Erregistratua> l = query.getResultList();
 		db.getTransaction().commit();
 		return l;
 	}
-	
+
 	public void bonoBatKendu(String NAN) {
 		Erregistratua aa = this.ErregistratuaLortu(NAN);
 		db.getTransaction().begin();
 		aa.bonoBatKendu();
 		db.getTransaction().commit();
 	}
-	
+
 	public ApostuAnitza apostuAnitzaLortu(int z) {
 		db.getTransaction().begin();
 		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
 		db.getTransaction().commit();
 		return aa;
 	}
-	
+
 	public void bonoakEguneratu(int z, String NAN) {
 		Erregistratua aa = this.ErregistratuaLortu(NAN);
 		db.getTransaction().begin();
@@ -511,7 +512,7 @@ public class DataAccess {
 		db.close();
 		System.out.println("DataBase closed");
 	}
-	
+
 	public Question galderaLortu(int i) {
 		db.getTransaction().begin();
 		Question q = db.find(Question.class, i);

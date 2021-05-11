@@ -8,6 +8,7 @@ import javax.swing.*;
 
 import domain.Event;
 import businessLogic.BLFacade;
+import businessLogic.BLFacadeImplementation;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -57,14 +58,14 @@ public class MainGUI extends JFrame {
 
 		super();
 		nireFrame = this;
-
+		BLFacadeImplementation blf = new BLFacadeImplementation();
+		setBussinessLogic(blf);
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
 				try {
 					// if (ConfigXML.getInstance().isBusinessLogicLocal()) facade.close();
 				} catch (Exception e1) {
-					// TODO Auto-generated catch block
 					System.out.println(
 							"Error: " + e1.toString() + " , probably problems with Business Logic or Database");
 				}

@@ -52,8 +52,10 @@ public interface BLFacade {
 	 */
 	@WebMethod
 	Admin createAdmin(String iz, String nan, String adina, String pasahitza, int adminZb);
-	 @WebMethod 
-	 public Erabiltzailea erabiltzaileaBadago(String izena, String pasahitza);
+
+	@WebMethod
+	public Erabiltzailea erabiltzaileaBadago(String izena, String pasahitza);
+
 	/**
 	 * This method creates a registered type of user.
 	 * 
@@ -102,69 +104,68 @@ public interface BLFacade {
 	 */
 	@WebMethod
 	public void initializeBD();
-	
+
 	@WebMethod
 	public int getGertaeraHandienaLortu();
-	
+
 	@WebMethod
-	public void diruaSartu(double dirua,String iz, String pas);
-	
+	public void diruaSartu(double dirua, String iz, String pas);
+
 	@WebMethod
-	public void gertaeraSortu(String azalpena,Date date,int zenb);
-	
+	public void gertaeraSortu(String azalpena, Date date, int zenb);
+
 	@WebMethod
 	public void pronostikoaSortu(double kuota, int pronostikoZb, int z2, String emaitza);
-	
+
 	@WebMethod
 	public void apustuaEgin(Pronostikoa p, String emaitza, double dirua, String erabNAN, int z);
-	
+
 	@WebMethod
 	public int zenbakiHandienaLortu();
-	
+
 	@WebMethod
 	public void emaitzaIpini(Question q, String e);
-	
+
 	@WebMethod
 	public Erregistratua ErregistratuaBilatu(String NAN);
-	
+
 	@WebMethod
 	public void gertaeraKendu(Event e);
-	
+
 	@WebMethod
 	public Question galderaLortu(int i);
-	
+
 	@WebMethod
 	public int pronostikoHandienaLortu();
-	
+
 	@WebMethod
 	public int zenbakiAnitzHandienaLortu();
-	
+
 	@WebMethod
 	public void apustuAnitzaEgin(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l);
-	
+
 	@WebMethod
 	public void listatikKendu(int Zb, Pronostikoa p1);
-	
+
 	@WebMethod
 	public void erabilgarritasunaKendu(int z);
-	
+
 	@WebMethod
 	public ApostuAnitza apostuAnitzaLortu(int z);
-	
+
 	@WebMethod
 	public void apostuAnitzaKendu(int z);
-	
+
 	@WebMethod
 	public void erreplikatu(String noriNAN, Erregistratua e);
-	
+
 	@WebMethod
 	public List<Erregistratua> erabiltzaileGuztiakLortu();
-	
+
 	@WebMethod
-	public void kenduBonoBat(String NAN) ;
-	
+	public void kenduBonoBat(String NAN);
+
 	@WebMethod
 	public void bonoakEguneratu(String NAN, int z);
-		
-	
+
 }

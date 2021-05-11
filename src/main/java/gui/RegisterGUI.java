@@ -1,6 +1,5 @@
 package gui;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import businessLogic.BLFacade;
-import businessLogic.BLFacadeImplementation;
 import dataAccess.DataAccess;
 import domain.Erabiltzailea;
 import domain.Erregistratua;
@@ -120,7 +118,7 @@ public class RegisterGUI extends JFrame {
 		final JTextPane erroreak = new JTextPane();
 		erroreak.setBounds(58, 218, 207, 22);
 		contentPane.add(erroreak);
-
+RegisterGUI r = this;
 		JButton btnErregistratu = new JButton("Erregistratu");
 		btnErregistratu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -132,7 +130,6 @@ public class RegisterGUI extends JFrame {
 				DataAccess dbManager = new DataAccess();
 				List<Erabiltzailea> erabiltzaileak = dbManager.getErabiltzaileGuztiak();
 				int mota = 2;
-
 				if (rdbtnAdministratzailea.isSelected()) {
 					mota = 1;
 				} else if (rdbtnErregistratua.isSelected()) {
@@ -153,13 +150,14 @@ public class RegisterGUI extends JFrame {
 						 * else if (MainGUI.getBusinessLogic().erabiltzaileaBadago(iz, pass) == null) {
 						 * erroreak.setText("Erabiltzailea existitzen da"); }
 						 */ else {
-						nireframe.setVisible(true);
-						contentPane.setVisible(false);
+						r.setVisible(false);
 						if (mota == 1) {
-							bl.createAdmin(iz, NAN, ad, pass, 1);
+							Admin a = bl.createAdmin(iz, NAN, ad, pass, 1);
 						} else {
-							bl.createErregistratua(iz, NAN, ad, pass);
+							Erregistratua er = bl.createErregistratua(iz, NAN, ad, pass);
 						}
+						nireframe.setVisible(true);
+
 					}
 				} catch (Exception u) {
 //					erroreak.setText("ezin da erabiltzaile berria sortu");

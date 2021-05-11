@@ -46,7 +46,7 @@ public class LoginGUI extends JFrame {
 			}
 		});
 	}
-	
+
 	public LoginGUI() {
 		super();
 	}
@@ -97,6 +97,8 @@ public class LoginGUI extends JFrame {
 		rdbtnErregistratua.setBounds(217, 160, 127, 25);
 		contentPane.add(rdbtnErregistratua);
 
+		LoginGUI l = this;
+
 		JButton btnSartu = new JButton("Sartu");
 		btnSartu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -118,14 +120,14 @@ public class LoginGUI extends JFrame {
 						boolean emaitza = bl.erabiltzaileZuzena(izena, pasahitza);
 						if (emaitza) {
 							if (mota == 1) {
-								AdminGUI a = new AdminGUI(izena,pasahitza,aurrekoa);
+//								AdminGUI a = new AdminGUI(izena, pasahitza, berria);
+								AdminGUI a = new AdminGUI(izena, pasahitza, aurrekoa);
 								a.setVisible(true);
-								contentPane.setVisible(false);
-							}else {
-								ErregistratuGUI e = new ErregistratuGUI(izena,pasahitza, aurrekoa);
+							} else {
+								ErregistratuGUI e = new ErregistratuGUI(izena, pasahitza, aurrekoa);
 								e.setVisible(true);
-								contentPane.setVisible(false);
 							}
+							l.setVisible(false);
 							System.out.println("Erabiltzaile zuzena.");
 						} else {
 							System.out.println("Pasahitza okerra.");
@@ -134,7 +136,8 @@ public class LoginGUI extends JFrame {
 						System.out.println("Erabiltzailea ez da existitzen");
 					}
 				} catch (Exception d) {
-					System.out.println("Erabiltzailea existitzen da");
+					System.out.println(d);
+//					System.out.println("Erabiltzailea existitzen da");
 				}
 			}
 		});

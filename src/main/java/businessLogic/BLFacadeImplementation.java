@@ -27,7 +27,7 @@ import exceptions.QuestionAlreadyExist;
  */
 @WebService(endpointInterface = "businessLogic.BLFacade")
 public class BLFacadeImplementation implements BLFacade {
-	DataAccess dbManager;
+	DataAccess dbManager = new DataAccess();
 
 	public BLFacadeImplementation() {
 		System.out.println("Creating BLFacadeImplementation instance");
@@ -87,7 +87,7 @@ public class BLFacadeImplementation implements BLFacade {
 
 	@WebMethod
 	public Erabiltzailea erabiltzaileaBadago(String izena, String pasahitza) {
-		DataAccess dbManager = new DataAccess();
+		dbManager.open(false);
 		Erabiltzailea isLog = dbManager.erabiltzaileaBadago(izena, pasahitza);
 		dbManager.close();
 		return isLog;
@@ -185,8 +185,8 @@ public class BLFacadeImplementation implements BLFacade {
 		List<Event> l = dbManager.getGertaeraHandiena();
 		dbManager.close();
 		int h = 0;
-		for(Event e:l) {
-			if(h<e.getEventNumber()) {
+		for (Event e : l) {
+			if (h < e.getEventNumber()) {
 				h = e.getEventNumber();
 			}
 		}
@@ -217,7 +217,7 @@ public class BLFacadeImplementation implements BLFacade {
 	@Override
 	public void apustuaEgin(Pronostikoa p, String emaitza, double dirua, String erabNAN, int z) {
 		dbManager.open(false);
-		dbManager.apustuaEgin(p, emaitza, dirua, erabNAN,z);
+		dbManager.apustuaEgin(p, emaitza, dirua, erabNAN, z);
 		dbManager.close();
 	}
 
@@ -257,7 +257,7 @@ public class BLFacadeImplementation implements BLFacade {
 		Question q = dbManager.galderaLortu(i);
 		dbManager.close();
 		return q;
-		
+
 	}
 
 	@Override
@@ -265,8 +265,8 @@ public class BLFacadeImplementation implements BLFacade {
 		dbManager.open(false);
 		List<Pronostikoa> l = dbManager.pronostikoHandienaLortu();
 		int max = 0;
-		for(Pronostikoa p: l) {
-			if(p.getPronostikoZb()>max) {
+		for (Pronostikoa p : l) {
+			if (p.getPronostikoZb() > max) {
 				max = p.getPronostikoZb();
 			}
 		}
