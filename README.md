@@ -211,7 +211,7 @@ Behin erabiltzaileak bere izena, pasahitza eta erabiltzaile mota ezarri ondoren,
 
 ##### Gertaera sortu
 
-![Gertaera Sortu](/Diagrams/Gertaera Sortu.jpg)
+![Gertaera Sortu](/Diagrams/GertaeraSortu.jpg)
 
 Lehenik administratzaileak gertaeraren azalpena eta data sartu behar izango du. Ondoren, sistemak negozio logikari deituko dio gertaeraSortu funtzioaren bitartez eta negozio logikak DataAccess klaseari deituko dio. Azkenik, DataAccess-eko funtzioak gertaera motako datua sortuko du administratzaileak sartutako datuekin eta datu basean sartuko du.
 
@@ -225,7 +225,7 @@ Lehenik, erregistratuak bere kontuan sartu nahi duen diru kopurua ipiniko du eta
 
 ##### Apostua normala eta Apostu Anitza egin
 
-![Apostu normala edo Anitza egin](/Diagrams/ApustuaEginEtaApostu Anitza egin.jpg)
+![Apostu normala edo Anitza egin](/Diagrams/ApustuaEginEtaApostuAnitzaEgin.jpg)
 
 Lehenik erabiltzaileak apostu mota aukeratuko du. Lehenik apostu normalaren sekuentzia diagrameren atala azalduko dut.
 
@@ -256,14 +256,14 @@ Kasu honetan, berriz administratzailea data bat aukeratzen du eta sistema data h
 
 ##### Erabiltzailea erreplikatu
 
-![Erabiltzailea erreplikatu](/Diagrams/Erabiltzailea Erreplikatu.jpg)
+![Erabiltzailea erreplikatu](/Diagrams/ErabiltzaileaErreplikatu.jpg)
 
 Erregistratuak erabiltzailea erreplikatzeko botoiari eman ondoren sistemak erabiltzaileGuztiakLortu funtzioaren bitartez datu basean dauden erregistratu guztiak hartu eta JComboBox batean ipiniko ditu. Ondoren, erregistratuak haietatik bat aukeratuko du eta orduan erreplikatu metodoaren bitartez datu basean erreplikatu nahi duen erregistratuaren erreplikatu listan berak sartuko da eta egindako aldaketa datu basean eguneratuko da.
 
 
 ##### Erabiltzaile erreplikatuenak lortu
 
-![Erabiltzaile erreplikatuenak lortu](/Diagrams/Erabiltzaile erreplikatuenak lortu.jpg)
+![Erabiltzaile erreplikatuenak lortu](/Diagrams/ErabiltzaileErreplikatuenakLortu.jpg)
 
 Administratzailea erabiltzaile erreplikatuneak lortzeko botoiari ematean erabiltzaileGuztiakLortu funtzioaren bitartez erregistratu guztiak lortuko ditu eta haietatik erregistratu gehien dituzten hiru erregistratuak lortuko ditu. Ondoren, RankingGUI interfaze grafikoa irekitzen da eta hiru erregistratuak 3-ko raking batean agertuko dira eta administratzaileak sariak banatu botoiari ematean bonoakEguneratu metodoaren bitartez lehengoari 10, bigarrenari 6 eta hirugarrenari 3 bono gehituko diogu bere kontuan. Bono hauek egindako apostuan %50-eko deskontua ematen du eta bakarrik aktibatuko dira erregistratuak erreplikatu gabeko apostu bat egitean.
 
