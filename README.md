@@ -281,11 +281,29 @@ Administratzailea erabiltzaile erreplikatuneak lortzeko botoiari ematean erabilt
 ![klase diagrama](/Diagrams/Design!ClassDiagram_0.jpg)
 
 
+Diagrama honetan apustuen aplikazioa funtzionatzeko klase guztiak eta klase bakoitzaren metodoak definitzen ditugu. Alde batetik, BLFacade eta DataAccess ditugu. BLFacade interfaze bat da eta DataAccess klase bat. Hauek biak erabiltzen ditugu datu basean kudeaketa osoa egiteko eta aplikazioan landu ditugun erabilpen kasu guztiak funtzionatzeko. Bestetik domeinu ereduko klaseak ditugu, bere aldagai eta metodoekin. Klase hauek datu baseko entitateak dira eta honelako klase motak datu basean sartu, ezabatu eta eguneratu dezakegu . Azkenik, EntityManager ditugu. Klase hau bere izena dioenez entitateen zuzendaria da eta honi esker datu basean entitateak sartu, ezabatu eta eguneratu dezakegu.
 
+Laburbilduz diagrama honetan aplikazioaren datu basearekin zerikusia duten klase guztien diagrama da.
 
 ## Inplementazioa
 
-Negozio logikako metodoen azalpena.
+Atal honetan negozio logikan eta domeinu ereduan dauden klaseak zehatz azalduko ditugu eta klaseen metodo eta funtzio guztien azalpena egingo dugu.
+
+
+### Domeinua
+
+#### Question
+Klase hau hasieratik sortuta zegoen eta dauden gertaererako apostuetarako galderak dira.
+
+###### Metodoak
+
+##### pronostikoaGehitu
+
+
+##### Pronostikoa
+Klase hau bigarren iterazioan sortu genuen eta klase honek galdera bakoitzerako dituen emaitza posibleak eta emaitza bakoitzak duen kuota adierazten du.
+
+#####
 
 #### **createQuestion**
 Metodo honek gertaera baterako galdera sortzen du. Galderaren textua, gertaera eta apostu minimoa sartu behar dira. Galdera objektua bueltatzen du edo null gertaera jada pasa bada edo galdera existitzen bada.
