@@ -293,9 +293,7 @@ Atal honetan negozio logikan eta domeinu ereduan dauden klaseak zehatz azalduko 
 ### Domeinua
 
 #### Question
-Klase hau hasieratik sortuta zegoen eta dauden gertaererako apostuetarako galderak dira.
-
-##### Metodoak
+Klase hau hasieratik sortuta zegoen eta dauden gertaererako apostuetarako galderak dira. Hauek dira klase honetan sortutako metodoak:
 
 ###### pronostikoaGehitu 
 Galderara pronostiko bat gehitzen du.
