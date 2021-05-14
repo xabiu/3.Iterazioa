@@ -200,3 +200,10 @@ Bai klase diagramarako, bai sekuentzia diagrama guztietarako esteketan utziko di
 Sekuentzia diagramaren argazkia -> https://drive.google.com/file/d/1zykMjoK2aO4rpOhTWWgLs9fJT0UZ9gzw/view?usp=sharing
 
 Erabiltzaileak sartu behar diren datu guztiak ondo sartu ondoren sistemak ondorengoa egiten du. Lehenik, aukeratutako motaren arabera createAdmin edo createErregistratuaren bidez deitzen dio negozio logikari. Gero negozio logikak DataAccess klaseari deitzen dio eta azkenean datu basean Admin edo Erregistratua motako datua sortzen du eta datu basean sartzen du.
+
+
+##### Logeatu
+
+Sekuentzia diagramaren argazkia -> https://drive.google.com/file/d/1qfKqQsjWIAm4GIR3TGgMTfRP0GGoduqQ/view?usp=sharing
+
+Behin erabiltzaileak bere izena, pasahitza eta erabiltzaile mota ezarri ondoren, sistemak 
