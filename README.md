@@ -193,6 +193,7 @@ Kasu honetan RankingGui interfaze grafikoa erabiltzen dugu. Interfaze honetan 3-
 ### Diseinua
 
 #### Sekuentzia diagramak
+Sekuentzia diagrama batzuk oso handiak dira eta ez dira ondo ikusten. Horretarako, irudian klikatu eta irudiaren repositoriora eramango dizu eta hor irudiari "zoom" egin ahal izango duzu hobeto ikusteko.
 
 ##### Erregistratu
 
