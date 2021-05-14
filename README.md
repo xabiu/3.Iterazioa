@@ -29,28 +29,28 @@ Proiektu hau hiru iterazioetan garatu dugu eta azkenengo iterazio honetan ondore
 #### Gertaera sortu
 Erabilpen kasu honerako GertaerakSortuGUI interfaze grafikoa erabiltzen dugu. Hor data eta azalpena sartzen dugu.
 
-##### Gertaera fluxua
+###### Gertaera fluxua
 1. *Admin* data bat eta gertaeraren azalpena sartzen du
 2. *System* data eta azalpena hartzen du, gertaera sortzen du eta datu basean sartzen du.
 
-##### Fluxu alternatiboa
+###### Fluxu alternatiboa
 1. Sartutako data ez da existitzen
 
 
 #### Erregistratu
 Erabilpen kasu honerako RegisterGUI erabiltzen dugu eta hor erabiltzaileak behar diren datu guztiak sartzen ditu.
 
-##### Gertaera fluxua
+###### Gertaera fluxua
 1. *Erabiltzailea* izena, pasahitza, adina eta NAN zenbakia sartzen du eta Erregistratua edo Admin izateko aukeretatik bat aukeratzen du.
 2. *System* erabiltzaileak sartutako datuekin Erregistratua edo Admin bat sortzen du eta datu basean sartzen du.
 3. *System* errorerik ez badago erabiltzaileari main interfaze grafikora bueltatuko dio logeatzeko.
 
-##### Fluxu alternatiboa
+###### Fluxu alternatiboa
 1. Sartutako izena eta pasahitza badago datu basean.
 2. Sartutako adina ez da zenbaki bat.
 
 
-##### Logeatu
+#### Logeatu
 Erabilpen kasu honerako LoginGUI interfaze grafikoa erabiltzen dugu eta interfaze honetan erabiltzaileak datuak sartzen ditu logeatzeko.
 ###### Gertaera fluxua
 1. *Erregistratua* izena, pasahitza eta erabiltzaile mota sartzen du.
@@ -61,7 +61,7 @@ Erabilpen kasu honerako LoginGUI interfaze grafikoa erabiltzen dugu eta interfaz
 1. Ez da existitzen erabiltzailerik sartutako datuekin.
 
 
-##### Dirua sartu
+#### Dirua sartu
 Erabilpen kasu honerako DiruaSartuGUI interafze grafikoa daukagu eta hor gure kontuan sartu nahi dugun dirua sartzen dugu.
 
 ###### Gertaera fluxua
@@ -72,7 +72,7 @@ Erabilpen kasu honerako DiruaSartuGUI interafze grafikoa daukagu eta hor gure ko
 1. Sartutako dirua ez da zenbaki bat.
 
 
-##### Apostua Egin
+#### Apostua Egin
 Honetarako ApostuakSortuGUI interfaze grafikoa daukagu. Interfaze honetan egutegi bat daukagu data aukeratzeko. Gero aukeratutako datan dauden gertaera guztiak ScrollPane batean agertuko dira eta aukeratutako gertaeran galderekin gauza bera. Behin galdera aukeratuta JComboBox baten bidez agertuko dira pronostiko guztiak kuota eta emaitza adieraziz eta horretatik bat aukeratuko duzu. Azkenik, dirua sartzen duzu eta apostua egiten duzu.
 
 ###### Gertaera fluxuak
@@ -93,7 +93,7 @@ Honetarako ApostuakSortuGUI interfaze grafikoa daukagu. Interfaze honetan eguteg
 4. Sartutako dirua kontuan duzuna baino handiagoa da.
 
 
-##### Emaitzak ipini
+#### Emaitzak ipini
 Kasu honetan bi interfaze grafiko erabiltzen ditugu. Alde batetik, GertaerakAukeratu eta bestetik, EmaitzakIpiniGUI.
 GertaerakAukeratu interfazean egutegiaren bidez emaitzak ipini nahi dituzun gertaerari aukertuko diozu eta behin gertaera aukeratuta EmaitzakIpniGUI interfaze grafikora joango zara. EmaitzakIpniGUI-n gertaerak dituen galderen kopuruen aldiz exekutatuko da, hau da, lehenengo aldian lehenengo galdera eta galdera horietatik dauden pronostikoetatik(emaitzekin) bat aukertu behar izango duzu. Gauza bera errepikatuko duzu galdera guztiekin.
 
@@ -119,7 +119,7 @@ GertaerakAukeratu interfazean egutegiaren bidez emaitzak ipini nahi dituzun gert
 
 
 
-##### Pronostikoak Sortu
+#### Pronostikoak Sortu
 Kasu honetan interfaze bakar bat erabili dugu PronostikoakSortuGUI izenekoa. Interfaze honetan egutegia berriz erabiltzen dugu data sartzeko eta aukeratutako datan gertaera guztiak JScrollPane batean pantailaratzen dira. Ondoren, aukeratutako gertaeran gauza bera gertatzen da galderekin. Azkenik, aukeratutako galderan emaitza eta kuota sartzen duzu eta pronostikoa sortzen duzu.
 
 ###### Gertaera fluxua
@@ -138,7 +138,7 @@ Kasu honetan interfaze bakar bat erabili dugu PronostikoakSortuGUI izenekoa. Int
 3. kuota ez da zenbaki bat.
 
 
-##### Apostu Anitza sortu
+#### Apostu Anitza sortu
 Kasu honetan ere interfaze bakar bat erabili dut ApostuAnitzaSortu izenekoa. Apostu normal baterako interfaze ia berdina erabili dut, hau da, datarako egutegi batekin eta bi JScrollPane gertaererako eta galdererako. Ondoren, pronostikoetarako JComboBox bat du eta azkenik bi botoi ditugu, bat apostua gehitzeko eta beste bat apostu anitza amaitzeko.
 
 ###### Gertaera fluxua
@@ -159,7 +159,7 @@ Kasu honetan ere interfaze bakar bat erabili dut ApostuAnitzaSortu izenekoa. Apo
 5. Sartutako dirua kontuan duzuna baino handiagoa da.
 
 
-##### Erabiltzailea erreplikatu
+#### Erabiltzailea erreplikatu
 Honetarako interfaze bat erabiltzen dugu ErabiltzaileaErreplikatuGUI izenekoa.
 
 ###### Gertaera fluxua
@@ -173,7 +173,7 @@ Honetarako interfaze bat erabiltzen dugu ErabiltzaileaErreplikatuGUI izenekoa.
 2. Aukeratutako erregistratua erreplikatzen ari zara.
 
 
-##### Erabiltzaile erreplikatuenak lortu
+#### Erabiltzaile erreplikatuenak lortu
 Kasu honetan RankingGui interfaze grafikoa erabiltzen dugu. Interfaze honetan 3-ko ranking bat sortu dugu Jlabel-en bidez eta botoi bat sartu dugu hiru hoberenei bonoak banatzeko eta hasierako orrira joateko.
 
 ###### Getaera fluxua
@@ -188,42 +188,47 @@ Kasu honetan RankingGui interfaze grafikoa erabiltzen dugu. Interfaze honetan 3-
 
 
 
-### Diseinua
+## Diseinua
 
-#### Sekuentzia diagramak
+### Sekuentzia diagramak
 
 
-##### Erregistratu
+#### Erregistratu
 
 ![Erregistratu](/Diagrams/Erregistratu.jpg)
+
 
 Erabiltzaileak sartu behar diren datu guztiak ondo sartu ondoren sistemak ondorengoa egiten du. Lehenik, aukeratutako motaren arabera createAdmin edo createErregistratuaren bidez deitzen dio negozio logikari. Gero negozio logikak DataAccess klaseari deitzen dio eta azkenean datu basean Admin edo Erregistratua motako datua sortzen du eta datu basean sartzen du.
 
 
-##### Logeatu
+#### Logeatu
 
 ![Logeatu](/Diagrams/logeatu.jpg) 
+
 
 Behin erabiltzaileak bere izena, pasahitza eta erabiltzaile mota ezarri ondoren, sistemak begiratuko du ea administratzailea edo erregistratua existitzen den datu basean. Horretarako, erabiltzaileZuzena funtzioaren bidez negozio logikari deituko dio eta ondoren DataAccess klaseari deituko dio. Datu basean badago erabiltzailea funtzioak true itzuliko du eta sistemak true jasotzen badu uneko interfazea itxiko du eta administrado bat bada AdminGUI irekiko du , bestela ErregistratuGUI irekiko du.
 
 
-##### Gertaera sortu
+#### Gertaera sortu
 
 ![Gertaera Sortu](/Diagrams/GertaeraSortu.jpg)
+
 
 Lehenik administratzaileak gertaeraren azalpena eta data sartu behar izango du. Ondoren, sistemak negozio logikari deituko dio gertaeraSortu funtzioaren bitartez eta negozio logikak DataAccess klaseari deituko dio. Azkenik, DataAccess-eko funtzioak gertaera motako datua sortuko du administratzaileak sartutako datuekin eta datu basean sartuko du.
 
 
-##### Dirua Sartu
+#### Dirua Sartu
 
 ![Dirua Sartu](/Diagrams/diruaSartu.jpg)
+
 
 Lehenik, erregistratuak bere kontuan sartu nahi duen diru kopurua ipiniko du eta dirua sartzeko botoiari emango dio. Ondoren, sistemak diru hori eta erregistratuak kontuan lehen zuen diru kopuruarekin gehitzen du. Behin aurreko guztia eginda, sistemak negozio logikari deituko dio diruaSartu metodoaren bitartez eta negozio logikak DataAccess-eri deituko dio. Azkenik, DataAccess-eko funtzioak diru hori erabiltzailean eguneratuko du.
 
 
-##### Apostua normala eta Apostu Anitza egin
+#### Apostua normala eta Apostu Anitza egin
 
 ![Apostu normala edo Anitza egin](/Diagrams/ApustuaEginEtaApostuAnitzaEgin.jpg)
+
 
 Lehenik erabiltzaileak apostu mota aukeratuko du. Lehenik apostu normalaren sekuentzia diagrameren atala azalduko dut.
 
@@ -235,9 +240,10 @@ Beste aldetik, apostu anitza aukeratzen badu apostu normal batean egindako pauso
 
 
 
-##### Emaitzak ipini
+#### Emaitzak ipini
 
 ![Emaitzak ipini](/Diagrams/EmaitzakIpini.jpg)
+
 
 Honetarako lehenik egutegiaren bidez data aukeratzen dugu eta sistema getEvents-en bitartez data horretarako dauden gertaera guztiak pantailaratuko ditu. Orduan, sistemak EmaitzakIpiniGUI interfazera irekiko du eta galderak baditu lehena hartu eta galdera horretarako dauden emaitzak(pronostikoak) hartuko ditu getP-ren bitartez eta JComboBox batean sartuko ditu. Ondoren, administratzaileak emaitza guztietatik bat aukeratuko du eta hurrengo galdera otoiari emango dio. Botoiari ematean, sistemak pronostiko horrerako dauden apostu normal eta anitz guztiak hartuko ditu. Apostu normala bada kuota sartutako diruarekin biderkatu eta sartuDirua funtzioarekin erabiltzailearen dirua eguneratuko da.
 Apostu anitza bada emaitza egokia bada pronostikoarekin zeukan erlazioa ezabatuko da eta emaitza ez bada egokia datu basean apostu anitzaren egoera falsera aldatuko du erabilgarritasunaKendu funtzioaren bitartez. Azkenik, behin apostu anitzetan aldaketa hauek eginda galderarako apostu anitz guztiak begiratuko ditu berriz. 
@@ -245,31 +251,35 @@ Apostu anitzak ez baditu eralzio gehiagorik pronostikoekin eta egoera true bada 
 
 
 
-##### Pronostikoa sortu
+#### Pronostikoa sortu
 
 ![Pronostikoa sortu](/Diagrams/pronostikoaIpini.jpg)
+
 
 Kasu honetan, berriz administratzailea data bat aukeratzen du eta sistema data horretan dauden gertaera guztiak erakutziko ditu. Orduan, administratzaileak gertaera bat aukeratuko du eta sistemak gertaera horretan dauden galdera guztiak erakutziko ditu. Azkenik, administratzailea pronostikoa sortu nahi duen galderan aukeratuko du, pronostikoaren emaitza eta kuota jarriko du eta botoiari emango dio. Orduan, sistemak pronostikoaSortu metodoaren bitartez Pronostikoa datu mota sortu eta datu basean sartuko du.
 
 
-##### Erabiltzailea erreplikatu
+#### Erabiltzailea erreplikatu
 
 ![Erabiltzailea erreplikatu](/Diagrams/ErabiltzaileaErreplikatu.jpg)
+
 
 Erregistratuak erabiltzailea erreplikatzeko botoiari eman ondoren sistemak erabiltzaileGuztiakLortu funtzioaren bitartez datu basean dauden erregistratu guztiak hartu eta JComboBox batean ipiniko ditu. Ondoren, erregistratuak haietatik bat aukeratuko du eta orduan erreplikatu metodoaren bitartez datu basean erreplikatu nahi duen erregistratuaren erreplikatu listan berak sartuko da eta egindako aldaketa datu basean eguneratuko da.
 
 
-##### Erabiltzaile erreplikatuenak lortu
+#### Erabiltzaile erreplikatuenak lortu
 
 ![Erabiltzaile erreplikatuenak lortu](/Diagrams/ErabiltzaileErreplikatuenakLortu.jpg)
+
 
 Administratzailea erabiltzaile erreplikatuneak lortzeko botoiari ematean erabiltzaileGuztiakLortu funtzioaren bitartez erregistratu guztiak lortuko ditu eta haietatik erregistratu gehien dituzten hiru erregistratuak lortuko ditu. Ondoren, RankingGUI interfaze grafikoa irekitzen da eta hiru erregistratuak 3-ko raking batean agertuko dira eta administratzaileak sariak banatu botoiari ematean bonoakEguneratu metodoaren bitartez lehengoari 10, bigarrenari 6 eta hirugarrenari 3 bono gehituko diogu bere kontuan. Bono hauek egindako apostuan %50-eko deskontua ematen du eta bakarrik aktibatuko dira erregistratuak erreplikatu gabeko apostu bat egitean.
 
 
 
-#### Klase Diagrama
+### Klase Diagrama
 
 ![klase diagrama](/Diagrams/Design!ClassDiagram_0.jpg)
+
 
 
 
