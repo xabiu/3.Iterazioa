@@ -6,15 +6,15 @@
 - Web zerbitzuak partzialki inplemetatuta. Xml-ko inplementazio guztia egin dugu behar ziren klase guztietan, baina hala eta guztiz ere web zerbitzuko url-a ez zuen aurkitzen eta  Java Persistence errorea ematen zuen. Errore hau zuzentzeko ez gara gai izan eta gainera beste ikasgaietan azterketak izango genituenez ezin izan dugu denbora gehiegirik dedikatu.
 - Internalizazioa ez dugu inplementatu, bakarrik main-eko interfazean internalizazioa daukagu.
 
-### Sarrera
+## Sarrera
 
 Proiektu honen helburua, hiru mailako software arkitektura batean diseinatutako apustuak kudeatzen dituen informazio sistema baten garapena izan da. Proiektu hau kontuak, gertaerak, apostuak eta pronostikoak sortzea, hainbat apostu egitea etab ahalbideratzen du. 
 
 Proiektu hau hiru iterazioetan garatu dugu eta azkenengo iterazio honetan ondorengoa egin dugu; alde batetik, hiru erabilpen kasu berri inplementatu ditugu: Apostu anitzak egin, erabiltzailea erreplikatu eta Erabiltzaile erreplikatuenak lortu (gure EK berria) . Hiru erabilpen kasu hauek garatzeko lehenik zirriborro batekin hasi gara eta erabilpen kasu bakoitzaren sekuentzia diagrama egin ditugu. Behin erabilpen kasu bakoitzaren ideia lortuta implementazioarekin hasi gara eta kodigoan nahi genituen zuzenketa edo hobekuntzak aldatu ditugu. Behin inplementazio guztia bukatuta eta frogatuta ondo doala lan guztiaren diseinua StarUML-ra pasatu dugu eta azkenik, proiektuaren azkenengo iterazioaren dokumentazioa egin dugu.
 
-### Eskakizunen Bilaketa
+## Eskakizunen Bilaketa
 
-#### Domeinuaren eredua (Entitateak/Erlazioak)
+### Domeinuaren eredua (Entitateak/Erlazioak)
 |**Klasea**|**Deskripzioa**|**Erlazioa**|
 |---|---|---|
 |**Event**|Partidoak adierazteko data zehatz batean sortu daitekeen gertaera klasea.|Questionekin erlazioa dauka, Event klaseak gertaera horren galdera guztiak gordetzen dituelako.|
@@ -26,28 +26,28 @@ Proiektu hau hiru iterazioetan garatu dugu eta azkenengo iterazio honetan ondore
 |**Erabiltzailea**|Erabiltzaile klase abstraktua.|Erregistratua eta Adminekin erlazioa dauka bi hauen klase gurasoa delako.|
 |**Admin**|Administradore motako erabiltzailea.|Erabiltzailearekin erlazioa dago admina erabiltzailearen klase umea delako.|
 
-#### Erabilpen kasuen eredua
+### Erabilpen kasuen eredua
 
-##### Gertaera sortu
+#### Gertaera sortu
 Erabilpen kasu honerako GertaerakSortuGUI interfaze grafikoa erabiltzen dugu. Hor data eta azalpena sartzen dugu.
 
-###### Gertaera fluxua
+##### Gertaera fluxua
 1. *Admin* data bat eta gertaeraren azalpena sartzen du
 2. *System* data eta azalpena hartzen du, gertaera sortzen du eta datu basean sartzen du.
 
-###### Fluxu alternatiboa
+##### Fluxu alternatiboa
 1. Sartutako data ez da existitzen
 
 
-##### Erregistratu
+#### Erregistratu
 Erabilpen kasu honerako RegisterGUI erabiltzen dugu eta hor erabiltzaileak behar diren datu guztiak sartzen ditu.
 
-###### Gertaera fluxua
+##### Gertaera fluxua
 1. *Erabiltzailea* izena, pasahitza, adina eta NAN zenbakia sartzen du eta Erregistratua edo Admin izateko aukeretatik bat aukeratzen du.
 2. *System* erabiltzaileak sartutako datuekin Erregistratua edo Admin bat sortzen du eta datu basean sartzen du.
 3. *System* errorerik ez badago erabiltzaileari main interfaze grafikora bueltatuko dio logeatzeko.
 
-###### Fluxu alternatiboa
+##### Fluxu alternatiboa
 1. Sartutako izena eta pasahitza badago datu basean.
 2. Sartutako adina ez da zenbaki bat.
 
