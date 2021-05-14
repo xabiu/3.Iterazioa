@@ -404,12 +404,15 @@ public class DataAccess {
 		}
 	}
 
-	public void apostuAnitzakKendu(int z) {
+	public void apostuAnitzakKendu(int z, int z2) {
 		db.getTransaction().begin();
+		Pronostikoa p = db.find(Pronostikoa.class, z);
 		ApostuAnitza aa = db.find(ApostuAnitza.class, z);
+		p.getApostuAnitzak().remove(aa);
 		db.remove(aa);
 		db.getTransaction().commit();
 	}
+	
 
 	public void apostuAnitzaSortu(int Zb, double dirua, String NAN, double kuotaM, ArrayList<Pronostikoa> l) {
 		db.getTransaction().begin();
@@ -439,10 +442,14 @@ public class DataAccess {
 
 	public void erreplikatu(String NAN1, Erregistratua e) {
 		Erregistratua aa = this.ErregistratuaLortu(NAN1);
-		db.getTransaction().begin();
-		System.out.println(aa);
-		aa.erreplikatuaGehitu(e);
-		db.getTransaction().commit();
+		if(!aa.erreplikatuListaLortu().contains(e)) {
+			db.getTransaction().begin();
+			System.out.println(aa);
+			aa.erreplikatuaGehitu(e);
+			db.getTransaction().commit();
+		}else {
+			System.out.println("erabiltzaile hau badaukazu erreplikatuta");
+		}
 	}
 
 	public List<Erregistratua> erabiltzaileGuztiakLortu() {

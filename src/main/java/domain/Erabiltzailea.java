@@ -13,14 +13,13 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @SuppressWarnings("serial")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@XmlSeeAlso ({Erregistratua.class, Admin.class})
-
+@XmlSeeAlso ({Erregistratua.class,Admin.class})
 public abstract class Erabiltzailea implements Serializable{
 
 	// private int nanZb;
 	// private char nanL;
-	@Id
 	@XmlID
+	@Id
 	private String iz;
 
 	private String nan;

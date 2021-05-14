@@ -9,10 +9,10 @@ import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
+@SuppressWarnings("serial")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
 public class Erregistratua extends Erabiltzailea implements Serializable {
-
 	private double dirua;
 	@OneToMany(fetch = FetchType.EAGER)
 	private ArrayList<Erregistratua> erreplikatuak;

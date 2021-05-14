@@ -154,7 +154,7 @@ public interface BLFacade {
 	public ApostuAnitza apostuAnitzaLortu(int z);
 
 	@WebMethod
-	public void apostuAnitzaKendu(int z);
+	public void apostuAnitzaKendu(int z, int z2);
 
 	@WebMethod
 	public void erreplikatu(String noriNAN, Erregistratua e);

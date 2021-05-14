@@ -16,13 +16,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @Entity
 public class Apustua implements Serializable {
 	@Id
+	@GeneratedValue
+	@XmlJavaTypeAdapter(IntegerAdapter.class)	
 	@XmlID
-	@XmlJavaTypeAdapter(IntegerAdapter.class)
-	private String erabNAN;
 	private int apostuZb;
-	private double dirua;
-	@OneToOne
 	private String emaitza;
+	private double dirua;
+	private String erabNAN;
 
 	public Apustua(String emaitza, double dirua, String erabNAN, int z) {
 		this.emaitza = emaitza;

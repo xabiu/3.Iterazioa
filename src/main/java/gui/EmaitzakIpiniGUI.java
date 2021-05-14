@@ -145,6 +145,7 @@ public class EmaitzakIpiniGUI extends JFrame {
 										 System.out.println("apustu anitzak");
 										 for(ApostuAnitza ab: list3) {
 											ApostuAnitza aa = bf.apostuAnitzaLortu(ab.getZenbakia());
+											if(aa != null) {
 											if(p.getPronostikoZb() == p1.getPronostikoZb()) {
 												 if(aa.badagoListan(p) && aa.erabilgarritasunaLortu()) {
 													 System.out.println("badago listan");
@@ -159,12 +160,13 @@ public class EmaitzakIpiniGUI extends JFrame {
 											if(ac.apostuenListaLortu().isEmpty() && ac.erabilgarritasunaLortu()) {
 												Erregistratua e3 = bf.ErregistratuaBilatu(ac.getNAN());
 												bf.diruaSartu(ac.getDirua()*ac.getKuota() + e3.getDirua(), e3.getIz(), e3.getPasahitza());
-												bf.apostuAnitzaKendu(ac.getZenbakia());
+												bf.apostuAnitzaKendu(ac.getZenbakia(), p.getPronostikoZb());
 											}else {
 												if(!ac.erabilgarritasunaLortu()) {
-													bf.apostuAnitzaKendu(ac.getZenbakia());
+													bf.apostuAnitzaKendu(ac.getZenbakia(), p.getPronostikoZb());
 												}
 											}
+										 }
 										 }
 									 }
 							 }
@@ -234,11 +236,11 @@ public class EmaitzakIpiniGUI extends JFrame {
 												System.out.println("3");
 												Erregistratua e3 = bf.ErregistratuaBilatu(ac.getNAN());
 												bf.diruaSartu(ac.getDirua()*ac.getKuota(), e3.getIz(), e3.getPasahitza());
-												bf.apostuAnitzaKendu(ac.getZenbakia());
+												bf.apostuAnitzaKendu(ac.getZenbakia(), p.getPronostikoZb());
 											}else {
 												if(!ac.erabilgarritasunaLortu()) {
 													System.out.println("4");
-													bf.apostuAnitzaKendu(ac.getZenbakia());
+													bf.apostuAnitzaKendu(ac.getZenbakia(), p.getPronostikoZb());
 												}
 											}
 										 }

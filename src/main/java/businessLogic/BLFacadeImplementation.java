@@ -312,9 +312,9 @@ public class BLFacadeImplementation implements BLFacade {
 	}
 
 	@WebMethod
-	public void apostuAnitzaKendu(int z) {
+	public void apostuAnitzaKendu(int z, int z2) {
 		dbManager.open(false);
-		dbManager.apostuAnitzakKendu(z);
+		dbManager.apostuAnitzakKendu(z,z2);
 		dbManager.close();
 	}
 

@@ -7,9 +7,9 @@ import java.util.Vector;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlIDREF;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 
 @SuppressWarnings("serial")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -17,17 +17,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 public class Question implements Serializable {
 	
 	@Id 
-	@XmlID
 	@XmlJavaTypeAdapter(IntegerAdapter.class)
 	@GeneratedValue
 	private Integer questionNumber;
 	private String question; 
 	private float betMinimum;
-	private String result;
+	private String result;  
 	@XmlIDREF
 	private Event event;
-	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
-	private Vector<Pronostikoa> pronostikoak  = new Vector<Pronostikoa>();
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	private Vector<Pronostikoa> pronostikoak;
 
 	public Question(){
 		super();
@@ -39,15 +38,15 @@ public class Question implements Serializable {
 		this.question = query;
 		this.betMinimum=betMinimum;
 		this.event = event;
-		
+		pronostikoak  = new Vector<Pronostikoa>();
 	}
 	
 	public Question(String query, float betMinimum,  Event event) {
 		super();
 		this.question = query;
 		this.betMinimum=betMinimum;
-//		this.event = event;
 		pronostikoak  = new Vector<Pronostikoa>();
+		//this.event = event;
 	}
 	
 	public void pronostikoaGehitu(Pronostikoa p) {
