@@ -365,3 +365,11 @@ Metodo hau sartutako erabiltzaileari bono bat kenduko dio (0 ez den bitartean no
 
 ### **bonoakEguneratu**
 Metodo honek bono kopurua eguneratzen du. Sartutako zenbakia bono kopuru berria izango da. Erabiltzailearen NA sartu behar da ere.
+
+## Ondorioak
+Proiektu honetan milaka zailtasun izan ditugu eta hala ere azkeneko iterazio honetan gure %100a eman ondoren, proiektuari bukaera eman diogu. Bidetik taldeko herena galdu dugu eta honen ondorioz kodearen berrikuspenak luzeagoak izan dira eta kodearen funtzionalitatea murriztu egin da. Taldearen dinamika ona izan da, nire (Mikel) ustez eta komunikazioa oso erraza izan. Proiektuaren konplexutasuna ez da oso handia izan baina ordu gehiegi jan ditu beste ikasgaietatik. Lortutako emaitzak onak izan dira: Eskatu zaizkigun eskakizunak egitea lortu dugu (Web zerbitzuak izan ezik).
+
+## Bideoaren URL-a
+
+## Kodearen URL-a
+https://github.com/xabiu/3.Iterazioa
