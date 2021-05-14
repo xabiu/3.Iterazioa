@@ -210,7 +210,7 @@ Behin erabiltzaileak bere izena, pasahitza eta erabiltzaile mota ezarri ondoren,
 
 ##### Gertaera sortu
 
-![Gertaera Sortu](/Diagrams/GertaeraSortu.jpg)
+![Gertaera Sortu](/Diagrams/Gertaera Sortu.jpg)
 
 Lehenik administratzaileak gertaeraren azalpena eta data sartu behar izango du. Ondoren, sistemak negozio logikari deituko dio gertaeraSortu funtzioaren bitartez eta negozio logikak DataAccess klaseari deituko dio. Azkenik, DataAccess-eko funtzioak gertaera motako datua sortuko du administratzaileak sartutako datuekin eta datu basean sartuko du.
 
