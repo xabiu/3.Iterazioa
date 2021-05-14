@@ -287,91 +287,91 @@ Administratzailea erabiltzaile erreplikatuneak lortzeko botoiari ematean erabilt
 
 Negozio logikako metodoen azalpena.
 
-### **createQuestion**
+#### **createQuestion**
 Metodo honek gertaera baterako galdera sortzen du. Galderaren textua, gertaera eta apostu minimoa sartu behar dira. Galdera objektua bueltatzen du edo null gertaera jada pasa bada edo galdera existitzen bada.
 
-### **createAdmin**
+#### **createAdmin**
 Metodo honek admin motako erabiltzailea sortzen du. Izena, NA, adina, pasahitza eta admin zenbakia sartu behar dira. Admin motako erabiltzaile objektua bueltatzen du edo null admina existitzen bada.
 
-### **createErregistratua**
+#### **createErregistratua**
 Metodo honek erregistratuta motako erabiltzailea sortzen du. Izena, NA, adina eta pasahitza sartu behar dira. Erregistratua motako erabiltzailea bueltatzen du edo null erabiltzailea existitzen bada.
 
-### **erabiltzaileaBadago**
+#### **erabiltzaileaBadago**
 Metodo honek erabiltzailea bilatzen du izena eta pasahitza sartuz. Erabiltzailea bueltatzen du aukitu bada edo null ez badago.
 
-### **erabiltzaileZuzena**
+#### **erabiltzaileZuzena**
 Metodo honek login egiteko behar den konprobaketa egiten du. Izena eta pasahitza sartuz, true edo false itzuliko du erabiltzailea existitzen bada eta pasahitza zuzena bada bakarrik.
 
-### **getEvents**
+#### **getEvents**
 Metodo hau gertaerak datu basetik lortzeko balio du. Gertaeraren data pasa behar da. Egun horren gertaeren bektorea itzultzen du.
 
-### **getEventsMonth**
+#### **getEventsMonth**
 Metodo hau gertaerak datu basetik lortzeko balio du. Gertaeraren dataren hilabetea pasa behar da. Hilabete horren gertaeren bektorea itzultzen du.
 
-### **initializeDB**
+#### **initializeDB**
 Metodo honek DataAccesseko datu basea abiaratzen du.
 
-### **getGertaeraHandienaLortu**
+#### **getGertaeraHandienaLortu**
 Metodo honek izenak dioen bezala gertaera handiena lortzen du. Int motako zenbakia bueltatuko du, gertaeraren identifikadorea.
 
-### **diruaSartu**
+#### **diruaSartu**
 Metodo hau dirua sartzeko balio du. Diru kopurua, erabiltzaile izena eta honen pasahitza sartu behar dira.
 
-### **gertaeraSortu**
+#### **gertaeraSortu**
 Metodo hau gertaerak sortzeko balio du. Gertaeraren azalpena, data eta zenbakia (identifikadorea) sartu behar dira.
 
-### **pronostikoaSortu**
+#### **pronostikoaSortu**
 Metodo hau pronostikoak sortzeko balio du. Pronostikoaren kuota, zenbakia (identifikadorea) eta emaitza sartu behar dira.
 
-### **apustuaEgin**
+#### **apustuaEgin**
 Metodo honekin apustuak egin daitezke. Pronostikoa, emaitza, dirua, erabiltzailearen NA eta apustuaren zenbakia sartu behar dira.
 
-### **zenbakiHandienaLortu**
+#### **zenbakiHandienaLortu**
 Metodo honek apustu zenbaki handiena lortzen du. Int motako zenbakia itzultzen du.
 
-### **emaitzaIpini**
+#### **emaitzaIpini**
 Metodo honekin gertaera bukatzerakoan emaitza jartzeko balio du. Galdera eta emaitza sartu behar dira.
 
-### **ErregistratuaBilatu**
+#### **ErregistratuaBilatu**
 Metodo honek erregistratu motako erabiltzailea itzultzen du. Erabiltzailearen NA sartu behar da.
 
-### **gertaeraKendu**
+#### **gertaeraKendu**
 Metodo honek gertaera ezabatuko du behin bukatuta. Gertaera sartu behar da.
 
-### **galderaLortu**
+#### **galderaLortu**
 Metodo honek galdera bueltatzen du. Galderaren identifikadorea sartu behar da.
 
-### **pronostikoHandienaLortu**
+#### **pronostikoHandienaLortu**
 Metodo honek pronostiko handienaren identifikazioa bueltatzen du.
 
-### **zenbakiAnitzHandienaLortu**
+#### **zenbakiAnitzHandienaLortu**
 Metodo honek apustu anitzetako identifikadore handiena lortzen du.
 
-### **apustuAnitzaEgin**
+#### **apustuAnitzaEgin**
 Metodo hau apustu anitzak egiteko erabiltzen da. Apostu zenbakia, dirua, NA, kuota eta apostuen arraylist bat pasa behar zaio. 
 
-### **listatikKendu**
+#### **listatikKendu**
 Metodo honekin apustu anitz batetik apustu bat kendu daiteke. Apustuaren zenbakia (identifikadorea) eta pronostikoa sartu behar dira.
 
-### **erabilgarritasunaKendu**
+#### **erabilgarritasunaKendu**
 Metodo apustuaren egoera falsera aldatzen du. Apostuaren zenbakia sartu behar da.
 
-### **apostuAnitzaLortu**
+#### **apostuAnitzaLortu**
 Metodo hau apustu anitza objektua bueltatzen du. Apustuaren identifikadorea sartu behar da.
 
-### **apostuAnitzaLortu**
+#### **apostuAnitzaLortu**
 Metodo hau apustu anitza ezabatzeko balio du. Apustuen identifikadoreak sartu behar dira.
 
-### **erreplikatu**
+#### **erreplikatu**
 Metodo hau apustu erreplikatuak sortzeko balio du. Erreplikatuko den erabiltzailearen NA eta objektua bera sartu behar dira.
 
-### **erabiltzaileGuztiakLortu**
+#### **erabiltzaileGuztiakLortu**
 Metodo honek erabiltzaile guztien lista bueltatzen du.
 
-### **kenduBonoBat**
+#### **kenduBonoBat**
 Metodo hau sartutako erabiltzaileari bono bat kenduko dio (0 ez den bitartean noski). Erabiltzailearen NA sartu behar da.
 
-### **bonoakEguneratu**
+#### **bonoakEguneratu**
 Metodo honek bono kopurua eguneratzen du. Sartutako zenbakia bono kopuru berria izango da. Erabiltzailearen NA sartu behar da ere.
 
 ## Ondorioak
