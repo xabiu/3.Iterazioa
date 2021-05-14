@@ -295,15 +295,40 @@ Atal honetan negozio logikan eta domeinu ereduan dauden klaseak zehatz azalduko 
 #### Question
 Klase hau hasieratik sortuta zegoen eta dauden gertaererako apostuetarako galderak dira.
 
-###### Metodoak
+##### Metodoak
 
-##### pronostikoaGehitu
+###### pronostikoaGehitu 
+Galderara pronostiko bat gehitzen du.
+###### getP
+Galderan dauden pronostiko guztiak bueltatzen du.
+###### getQuestionNumber
+Galderaren zenbakia bueltatzen du.
+###### setQuestionNumber
+Galderaren zenbakia aldatzen du.
+###### setQuestion
+Galderaren azalpena aldatzen du.
+###### getQuestion
+Galderaren azalpena bueltatzen du.
+###### getBetMinimum
+Galderaren gutxieneko apostu kantitatea bueltatzen du.
+###### setBetMinimum
+Galderaren gutxieneko apostu kantitatea aldatzen du.
+###### getResult
+Galderaren emaitza bueltatzen du.
+###### setResult
+Galderaren emaitza aldatzen du.
+###### getEvent
+Galderak parte hartzen duen gertaera bueltatzen du.
+###### setEvent
+Galderak parte hartzen duen gertaera aldatzen du.
 
 
-##### Pronostikoa
+#### Pronostikoa
 Klase hau bigarren iterazioan sortu genuen eta klase honek galdera bakoitzerako dituen emaitza posibleak eta emaitza bakoitzak duen kuota adierazten du.
 
-#####
+##### Metodoak
+
+
 
 #### **createQuestion**
 Metodo honek gertaera baterako galdera sortzen du. Galderaren textua, gertaera eta apostu minimoa sartu behar dira. Galdera objektua bueltatzen du edo null gertaera jada pasa bada edo galdera existitzen bada.
