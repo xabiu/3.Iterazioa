@@ -191,7 +191,6 @@ Kasu honetan RankingGui interfaze grafikoa erabiltzen dugu. Interfaze honetan 3-
 
 
 ### Diseinua
-Bai klase diagramarako, bai sekuentzia diagrama guztietarako esteketan utziko ditugula erabaki dugu argazkiak dokumentuan txertatzea kasu batzuetan ez dela ia ezer ikusten sekuentziak duen tamainagatik.
 
 #### Sekuentzia diagramak
 
@@ -206,4 +205,72 @@ Erabiltzaileak sartu behar diren datu guztiak ondo sartu ondoren sistemak ondore
 
 ![Logeatu](/Diagrams/logeatu.jpg) 
 
-Behin erabiltzaileak bere izena, pasahitza eta erabiltzaile mota ezarri ondoren, sistemak 
+Behin erabiltzaileak bere izena, pasahitza eta erabiltzaile mota ezarri ondoren, sistemak begiratuko du ea administratzailea edo erregistratua existitzen den datu basean. Horretarako, erabiltzaileZuzena funtzioaren bidez negozio logikari deituko dio eta ondoren DataAccess klaseari deituko dio. Datu basean badago erabiltzailea funtzioak true itzuliko du eta sistemak true jasotzen badu uneko interfazea itxiko du eta administrado bat bada AdminGUI irekiko du , bestela ErregistratuGUI irekiko du.
+
+
+##### Gertaera sortu
+
+![Gertaera Sortu](/Diagrams/Gertaera Sortu.jpg)
+
+Lehenik administratzaileak gertaeraren azalpena eta data sartu behar izango du. Ondoren, sistemak negozio logikari deituko dio gertaeraSortu funtzioaren bitartez eta negozio logikak DataAccess klaseari deituko dio. Azkenik, DataAccess-eko funtzioak gertaera motako datua sortuko du administratzaileak sartutako datuekin eta datu basean sartuko du.
+
+
+##### Dirua Sartu
+
+![Dirua Sartu](/Diagrams/diruaSartu.jpg)
+
+Lehenik, erregistratuak bere kontuan sartu nahi duen diru kopurua ipiniko du eta dirua sartzeko botoiari emango dio. Ondoren, sistemak diru hori eta erregistratuak kontuan lehen zuen diru kopuruarekin gehitzen du. Behin aurreko guztia eginda, sistemak negozio logikari deituko dio diruaSartu metodoaren bitartez eta negozio logikak DataAccess-eri deituko dio. Azkenik, DataAccess-eko funtzioak diru hori erabiltzailean eguneratuko du.
+
+
+##### Apostua normala eta Apostu Anitza egin
+
+![Apostu normala edo Anitza egin](/Diagrams/ApustuaEginEtaApostu Anitza egin.jpg)
+
+Lehenik erabiltzaileak apostu mota aukeratuko du. Lehenik apostu normalaren sekuentzia diagrameren atala azalduko dut.
+
+Apostu hau egiteko lehenik erabiltzaileak data bat aukeratuko du. Orduan, hartutako datarekin sistemak getEvets funtzioaren bitartez datu basean sartutako datarako dauden gertaera guztiak hartu eta interfazean pantailaratzen ditu. Gertaera horietatik erregistratuak bat aukeratuko du eta Event klasea duen getQuestion funtzioaren bitartez gertaera horretarako dauden galdera guztiak hartu eta inetrfazean pantailaratuko ditu. Erregistratuak galdera bat aukeratu eta gero galdera horretarako dauden pronostikoak aterako dira pronostikoaren emaitza eta kuota adieraziz. Azkenik, erregistratuak bera nahi duen emaitza aukeratuko du eta apostu horretarako sartu nahi duen dirua ipiniko du eta apostua egiteko botoiari emango dio. Botoi horri ematean sistemak begiratuko du ea erabiltzaileak bonori dituen ala ez. Bonoak baditu kontuan diruaren erdia kenduko dio, gero erabiltzailearen bono kopurua datu basean eguneratuko du eta azkenik apustua sortu eta datu basean sartuko du.
+
+Erregistratuak bere apustuak erreplikatzen ari den erabiltzailerik badago sistemak apustu bera sortu eta erabiltzaile horren izenean apustua sortu eta datu basean sartuko du bonoak dituen ala ez kontuan izan barik.
+
+Beste aldetik, apostu anitza aukeratzen badu apostu normal batean egindako pauso guztiak berdinak izango dira baina bi botoi egongo dira bat egon beharrean. Botoi bat apostua gehitzeko balio du, hau da, egindako apostua pilaratzen du(bonoena kontuan hartuta) eta hurrengo apostua egiteko prest gaude. Beste botoia sakatzen badugu apustu anitza bukatzen eta momentura arte egindako apostu anitza datu basera igotzen da apostuAnitzaEgin funtzioaren bitartez. Azkenik, erabiltzaileak bere apostuak beste batek erreplikatzen ari bada eta erabiltzaile hori behar duen diru nahikoa kontuan badu apostu anitza bera egingo du ere bai(bonoak kontuan hartu izan gabe).
+
+
+
+##### Emaitzak ipini
+
+![Emaitzak ipini](/Diagrams/EmaitzakIpini.jpg)
+
+Honetarako lehenik egutegiaren bidez data aukeratzen dugu eta sistema getEvents-en bitartez data horretarako dauden gertaera guztiak pantailaratuko ditu. Orduan, sistemak EmaitzakIpiniGUI interfazera irekiko du eta galderak baditu lehena hartu eta galdera horretarako dauden emaitzak(pronostikoak) hartuko ditu getP-ren bitartez eta JComboBox batean sartuko ditu. Ondoren, administratzaileak emaitza guztietatik bat aukeratuko du eta hurrengo galdera otoiari emango dio. Botoiari ematean, sistemak pronostiko horrerako dauden apostu normal eta anitz guztiak hartuko ditu. Apostu normala bada kuota sartutako diruarekin biderkatu eta sartuDirua funtzioarekin erabiltzailearen dirua eguneratuko da.
+Apostu anitza bada emaitza egokia bada pronostikoarekin zeukan erlazioa ezabatuko da eta emaitza ez bada egokia datu basean apostu anitzaren egoera falsera aldatuko du erabilgarritasunaKendu funtzioaren bitartez. Azkenik, behin apostu anitzetan aldaketa hauek eginda galderarako apostu anitz guztiak begiratuko ditu berriz. 
+Apostu anitzak ez baditu eralzio gehiagorik pronostikoekin eta egoera true bada orduan erregistratuak apostu anitza irabazi duela suposatzen dugu eta erregistratuari apostu anitzan sartutako dirua bider kuota metatua satzen dugu bere kontuan. Apostu anitzaren egoera false bada, orduan erabiltzaileak apostu anitza galdu duela suposatzen dugu eta apostu anitza datu basetik kentzen dugu apostuAnitzaKendu metodoaren bitartez. Azkenik, sistemak EmaitzakIpiniGUI ixten eta irekitzen du aukeratutako gertaeraren hurrengo galderari emaitza ipintzeko. Azkenengo galderan bagaude, hurrengo galdera botoiaren gaitasuna kentzen da eta Sartu emaitza botoia aktibatzen da. Botoi hau sakatzean beste botoiaren berdina egiten du azkenengo galderarekin. Behin galderaren emaitza ipinita gertaera datu basetik kentzen du gertaeraKendu metodoaren bitartez eta uneko interfazea ixten du eta administratzailearen hasierako interfazea irekitzen du.
+
+
+
+##### Pronostikoa sortu
+
+![Pronostikoa sortu](/Diagrams/pronostikoaIpini.jpg)
+
+Kasu honetan, berriz administratzailea data bat aukeratzen du eta sistema data horretan dauden gertaera guztiak erakutziko ditu. Orduan, administratzaileak gertaera bat aukeratuko du eta sistemak gertaera horretan dauden galdera guztiak erakutziko ditu. Azkenik, administratzailea pronostikoa sortu nahi duen galderan aukeratuko du, pronostikoaren emaitza eta kuota jarriko du eta botoiari emango dio. Orduan, sistemak pronostikoaSortu metodoaren bitartez Pronostikoa datu mota sortu eta datu basean sartuko du.
+
+
+##### Erabiltzailea erreplikatu
+
+![Erabiltzailea erreplikatu](/Diagrams/Erabiltzailea Erreplikatu.jpg)
+
+Erregistratuak erabiltzailea erreplikatzeko botoiari eman ondoren sistemak erabiltzaileGuztiakLortu funtzioaren bitartez datu basean dauden erregistratu guztiak hartu eta JComboBox batean ipiniko ditu. Ondoren, erregistratuak haietatik bat aukeratuko du eta orduan erreplikatu metodoaren bitartez datu basean erreplikatu nahi duen erregistratuaren erreplikatu listan berak sartuko da eta egindako aldaketa datu basean eguneratuko da.
+
+
+##### Erabiltzaile erreplikatuenak lortu
+
+![Erabiltzaile erreplikatuenak lortu](/Diagrams/Erabiltzaile erreplikatuenak lortu.jpg)
+
+Administratzailea erabiltzaile erreplikatuneak lortzeko botoiari ematean erabiltzaileGuztiakLortu funtzioaren bitartez erregistratu guztiak lortuko ditu eta haietatik erregistratu gehien dituzten hiru erregistratuak lortuko ditu. Ondoren, RankingGUI interfaze grafikoa irekitzen da eta hiru erregistratuak 3-ko raking batean agertuko dira eta administratzaileak sariak banatu botoiari ematean bonoakEguneratu metodoaren bitartez lehengoari 10, bigarrenari 6 eta hirugarrenari 3 bono gehituko diogu bere kontuan. Bono hauek egindako apostuan %50-eko deskontua ematen du eta bakarrik aktibatuko dira erregistratuak erreplikatu gabeko apostu bat egitean.
+
+
+
+#### Klase Diagrama
+
+![klase diagrama](/Diagrams/Design!ClassDiagram_0.jpg)
+
+
+
