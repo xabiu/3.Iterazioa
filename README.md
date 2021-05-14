@@ -287,46 +287,25 @@ Laburbilduz diagrama honetan aplikazioaren datu basearekin zerikusia duten klase
 
 ## Inplementazioa
 
-Atal honetan negozio logikan eta domeinu ereduan dauden klaseak zehatz azalduko ditugu eta klaseen metodo eta funtzio guztien azalpena egingo dugu.
+Atal honetan negozio logikan dauden klaseak zehatz azalduko ditugu eta sortutako metodo eta funtzio guztien azalpenak egingo ditugu.
+
+### Klaseak
+
+#### BLFacade
+Honek berez ez da klase bat baizik eta negozio logikaren interfazea. Hemen definitzen ditugu negozio logikan inplementatu ditugun metodo guztiak.
+
+#### BLFacadeImplementation
+Klase hau interfazeak definitzen dituen metodo guztiak inplementatzen ditu. Klase honen zeregina DataAccess klaseari deitzea da datu basearen kudeaketa egiteko.
+
+#### BusinessLogicServer
+Klase hau exekutatzen da negozio logika localean exekutatu nahi dugunean.
+
+#### BusinessLogicServerAWS
+Klase hau exekutatzen da negozio logika globalean exekutatu nahi dugunean, hau da, web zerbitzuak erabili nahi baditugu klase honek publisher-aren rola hartzen du.
 
 
-### Domeinua
 
-#### Question
-Klase hau hasieratik sortuta zegoen eta dauden gertaererako apostuetarako galderak dira. Hauek dira klase honetan sortutako metodoak:
-
-###### pronostikoaGehitu 
-Galderara pronostiko bat gehitzen du.
-###### getP
-Galderan dauden pronostiko guztiak bueltatzen du.
-###### getQuestionNumber
-Galderaren zenbakia bueltatzen du.
-###### setQuestionNumber
-Galderaren zenbakia aldatzen du.
-###### setQuestion
-Galderaren azalpena aldatzen du.
-###### getQuestion
-Galderaren azalpena bueltatzen du.
-###### getBetMinimum
-Galderaren gutxieneko apostu kantitatea bueltatzen du.
-###### setBetMinimum
-Galderaren gutxieneko apostu kantitatea aldatzen du.
-###### getResult
-Galderaren emaitza bueltatzen du.
-###### setResult
-Galderaren emaitza aldatzen du.
-###### getEvent
-Galderak parte hartzen duen gertaera bueltatzen du.
-###### setEvent
-Galderak parte hartzen duen gertaera aldatzen du.
-
-
-#### Pronostikoa
-Klase hau bigarren iterazioan sortu genuen eta klase honek galdera bakoitzerako dituen emaitza posibleak eta emaitza bakoitzak duen kuota adierazten du.
-
-##### Metodoak
-
-
+### Negozio Logikaren Metodoak
 
 #### **createQuestion**
 Metodo honek gertaera baterako galdera sortzen du. Galderaren textua, gertaera eta apostu minimoa sartu behar dira. Galdera objektua bueltatzen du edo null gertaera jada pasa bada edo galdera existitzen bada.
@@ -416,9 +395,16 @@ Metodo hau sartutako erabiltzaileari bono bat kenduko dio (0 ez den bitartean no
 Metodo honek bono kopurua eguneratzen du. Sartutako zenbakia bono kopuru berria izango da. Erabiltzailearen NA sartu behar da ere.
 
 ## Ondorioak
-Proiektu honetan milaka zailtasun izan ditugu eta hala ere azkeneko iterazio honetan gure %100a eman ondoren, proiektuari bukaera eman diogu. Bidetik taldeko herena galdu dugu eta honen ondorioz kodearen berrikuspenak luzeagoak izan dira eta kodearen funtzionalitatea murriztu egin da. Taldearen dinamika ona izan da, nire (Mikel) ustez eta komunikazioa oso erraza izan. Proiektuaren konplexutasuna ez da oso handia izan baina ordu gehiegi jan ditu beste ikasgaietatik. Lortutako emaitzak onak izan dira: Eskatu zaizkigun eskakizunak egitea lortu dugu (Web zerbitzuak izan ezik).
+Taldekide bakoitzak ondorio ezberdinak izan ditugu proiektu honerako. Horregatik, bakoitzak izandako ondorioak banaka azalduko ditugu. Lehenik Mikelen ondorioa ikusiko duzu, gero Xabierrena.
 
-## Bideoaren URL-a
+### Mikel Alvarez
+Proiektu honetan milaka zailtasun izan ditugu eta hala ere azkeneko iterazio honetan gure %100a eman ondoren, proiektuari bukaera eman diogu. Bidetik taldeko herena galdu dugu eta honen ondorioz kodearen berrikuspenak luzeagoak izan dira eta kodearen funtzionalitatea murriztu egin da. Taldearen dinamika ona izan da, nire ustez eta komunikazioa oso erraza izan. Proiektuaren konplexutasuna ez da oso handia izan baina ordu gehiegi jan ditu beste ikasgaietatik. Lortutako emaitzak onak izan dira: Eskatu zaizkigun eskakizunak egitea lortu dugu (Web zerbitzuak eta Internazionalizazioa izan ezik).
 
-## Kodearen URL-a
+### Xabier Urrechua
+Hasierako iterazioan nahiko galduta egon naizela esango nuke. Baina bigarrenengo eta azkenengo iterazioetan orkorrean askoz hobeto egon naizela nabari dut. Azkenengo iterazioetan inplementatzerakoan nahiz eta sailtazun asko izan azkenean erroreak konpontzeko gai izan nahiz eta azkenean aplikazioaren proiektua atzegina eta egokia iruditu zait irakasgai honerako. Beste aldetik, ikasgai osoa lana taldean egin dugunez asko lagundu nau taldezko lana hobetzeko eta proiektua iterazioetan sakabanatuta egotea asko lagundu digu proiektuaren garapenarekin. Uste dut irakasgai honetan ikasi ditudan hainbat gauza oso lagungarriak izango direla nire etorkizunerako, batez ere ingurune laboralean, taldelana oso garrantzitsua delako.
+
+### Bideoaren URL-a
+https://www.youtube.com/watch?v=ICgSdBOktH8&t=92s
+
+### Kodearen URL-a
 https://github.com/xabiu/3.Iterazioa
