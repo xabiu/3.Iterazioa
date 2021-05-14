@@ -407,4 +407,4 @@ Hasierako iterazioan nahiko galduta egon naizela esango nuke. Baina bigarrenengo
 https://www.youtube.com/watch?v=ICgSdBOktH8&t=92s
 
 ### Kodearen URL-a
-https://github.com/xabiu/3.Iterazioa
+https://github.com/xabiu/3.Iterazioa 
