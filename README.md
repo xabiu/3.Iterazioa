@@ -1,6 +1,4 @@
-# 3.Iterazioa
-
-## Bets21 Proiektuaren 3.Iterazioa: Apostuak egiteko sistema baten inplementazioa javan idatzita. 
+# 3.Iterazioaren Dokumentazio finala  
 
 - Egileak: **Xabier urretxua** (Scrum Master) eta **Mikel Álvarez**. 
 - Web zerbitzuak partzialki inplemetatuta. Xml-ko inplementazio guztia egin dugu behar ziren klase guztietan, baina hala eta guztiz ere web zerbitzuko url-a ez zuen aurkitzen eta  Java Persistence errorea ematen zuen. Errore hau zuzentzeko ez gara gai izan eta gainera beste ikasgaietan azterketak izango genituenez ezin izan dugu denbora gehiegirik dedikatu.
