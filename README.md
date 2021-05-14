@@ -23,7 +23,7 @@ Proiektu hau hiru iterazioetan garatu dugu eta azkenengo iterazio honetan ondore
 |**Apostua**|Pronostiko batean apostu bat egiteko klasea.|Pronostikoekin eta Erabiltzaileekin erlazioa du.|
 |**Apostu Anitzak**|Pronostiko batean apostu anitz egiteko klasea.|Pronostikoekin eta Erabiltzaileekin erlazioa du.|
 |**Erregistratua**|Erabizaile erregistratua sortzeko klasea.|Apostua, Apostu Anitzekin eta Erabiltzailearekin erlazioa dago erabiltzaileak bere apostuak gordeko dituelako.|
-|**Erabiltzailea**|Erabiltzaile klase orokorra.|Erregistratua eta Adminekin erlazioa dauka bi hauen klase gurasoa delako.|
+|**Erabiltzailea**|Erabiltzaile klase abstraktua.|Erregistratua eta Adminekin erlazioa dauka bi hauen klase gurasoa delako.|
 |**Admin**|Administradore motako erabiltzailea.|Erabiltzailearekin erlazioa dago admina erabiltzailearen klase umea delako.|
 
 #### Erabilpen kasuen eredua
@@ -187,3 +187,14 @@ Kasu honetan RankingGui interfaze grafikoa erabiltzen dugu. Interfaze honetan 3-
 
 ###### Fluxu alternatiboa
 1. Ez dago erregistraturik erreplikatuekin.
+
+
+
+### Diseinua
+Bai klase diagramarako, bai sekuentzia diagrama guztietarako esteketan utziko ditugula erabaki dugu argazkiak dokumentuan txertatzea kasu batzuetan ez dela ia ezer ikusten sekuentziak duen tamainagatik.
+
+#### Sekuentzia diagramak
+
+##### Erregistratu
+
+Sekuentzia diagramaren argazkia -> 
